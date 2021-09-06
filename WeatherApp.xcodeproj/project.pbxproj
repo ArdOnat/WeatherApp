@@ -10,7 +10,6 @@
 		4C39DCF926D4FF93000317F8 /* String+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C39DCF826D4FF93000317F8 /* String+Date.swift */; };
 		4C39DCFC26D515DA000317F8 /* URLSessionNetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C39DCFB26D515DA000317F8 /* URLSessionNetworkLayer.swift */; };
 		4C39DCFE26D51C82000317F8 /* WeakRefTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C39DCFD26D51C82000317F8 /* WeakRefTests.swift */; };
-		4C5CB51526D995B100D3E63C /* Ben1jsonım.json in Resources */ = {isa = PBXBuildFile; fileRef = 4C5CB51426D995B100D3E63C /* Ben1jsonım.json */; };
 		4CA335F626D27AEC00EBE252 /* UIViewController+Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA335F526D27AEC00EBE252 /* UIViewController+Toast.swift */; };
 		4CA335F826D27C8D00EBE252 /* WeakRef.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA335F726D27C8D00EBE252 /* WeakRef.swift */; };
 		4CC1064726CF9130001432B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC1064626CF9130001432B7 /* AppDelegate.swift */; };
@@ -50,7 +49,6 @@
 		4C39DCF826D4FF93000317F8 /* String+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Date.swift"; sourceTree = "<group>"; };
 		4C39DCFB26D515DA000317F8 /* URLSessionNetworkLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionNetworkLayer.swift; sourceTree = "<group>"; };
 		4C39DCFD26D51C82000317F8 /* WeakRefTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakRefTests.swift; sourceTree = "<group>"; };
-		4C5CB51426D995B100D3E63C /* Ben1jsonım.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Ben1jsonım.json"; sourceTree = "<group>"; };
 		4CA335F526D27AEC00EBE252 /* UIViewController+Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Toast.swift"; sourceTree = "<group>"; };
 		4CA335F726D27C8D00EBE252 /* WeakRef.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakRef.swift; sourceTree = "<group>"; };
 		4CC1064326CF9130001432B7 /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -182,7 +180,6 @@
 				4CA335FC26D2A89F00EBE252 /* Supporting Files */,
 				4CA335FD26D2A8AC00EBE252 /* Resources */,
 				4CC1065426CF9131001432B7 /* Info.plist */,
-				4C5CB51426D995B100D3E63C /* Ben1jsonım.json */,
 			);
 			path = WeatherApp;
 			sourceTree = "<group>";
@@ -388,7 +385,6 @@
 				4CC1065326CF9131001432B7 /* LaunchScreen.storyboard in Resources */,
 				4CCEDA6A26D119C100752913 /* WeatherInformationUITableViewCell.xib in Resources */,
 				4CCEDA6E26D136A800752913 /* HourlyDataCollectionViewCell.xib in Resources */,
-				4C5CB51526D995B100D3E63C /* Ben1jsonım.json in Resources */,
 				4CC1068426CF96D0001432B7 /* HomePageViewController.xib in Resources */,
 				4CC1065026CF9131001432B7 /* Assets.xcassets in Resources */,
 			);

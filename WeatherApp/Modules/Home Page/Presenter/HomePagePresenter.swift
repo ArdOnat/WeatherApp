@@ -8,15 +8,6 @@
 
 import Foundation
 
-protocol arda: muhammed {
-    
-}
-
-protocol muhammed {
-    
-}
-
-
 protocol HomePagePresenterProtocol: AnyObject {
     var view: HomePageViewProtocol? { get set }
     var interactor: HomePageInteractorProtocol { get }
