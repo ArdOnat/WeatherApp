@@ -707,7 +707,7 @@
 			repositoryURL = "https://github.com/ArdOnat/NetworkModule.git";
 			requirement = {
 				kind = revision;
-				revision = 15138648add770c7b78ba13f0f4bd703903a2334;
+				revision = 8a710bf0c3d0d2bc3d2efaa77e723ae161ddd0b9;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
