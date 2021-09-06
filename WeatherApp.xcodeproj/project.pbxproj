@@ -107,13 +107,21 @@
 			path = NetworkLayer;
 			sourceTree = "<group>";
 		};
-		4CA335F926D2A7DA00EBE252 /* Common */ = {
+		4C3C7B6D26E5FB5000E0411B /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				4C39DCFA26D4FFA1000317F8 /* NetworkLayer */,
 				4CA335F726D27C8D00EBE252 /* WeakRef.swift */,
 				4CA335F526D27AEC00EBE252 /* UIViewController+Toast.swift */,
 				4C39DCF826D4FF93000317F8 /* String+Date.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		4CA335F926D2A7DA00EBE252 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				4C3C7B6D26E5FB5000E0411B /* Helpers */,
+				4C39DCFA26D4FFA1000317F8 /* NetworkLayer */,
 			);
 			path = Common;
 			sourceTree = "<group>";

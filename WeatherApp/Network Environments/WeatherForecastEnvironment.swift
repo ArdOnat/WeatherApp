@@ -18,7 +18,6 @@ struct WeatherForecastApi: ApiEnvironment {
 enum WeatherForecastNetworkEnvironment: NetworkEnvironment {
     case prod
     
-    
     var baseURL: String {
         switch self {
         case .prod: return "https://api.openweathermap.org/data/2.5/"
