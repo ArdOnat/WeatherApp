@@ -19,33 +19,6 @@ protocol HomePageInteractorOutputProtocol {
     func onFetchWeatherInformationFailure(errorMessage: String)
 }
 
-final class Composer: HomePageInteractorOutputProtocol {
-    func onFetchWeatherInformationSuccess(weatherInformationList: [[CountryWeatherInformationModel]], cityName: String) {
-        outputs.forEach { $0.onFetchWeatherInformationSuccess(weatherInformationList: weatherInformationList, cityName: cityName)}
-    }
-    
-    func onFetchWeatherInformationFailure(errorMessage: String) {
-        
-    }
-    
-    let outputs: [HomePageInteractorOutputProtocol]
-    
-    init(_ outputs: [HomePageInteractorOutputProtocol]) {
-        self.outputs = outputs
-    }
-}
-
-
-struct RequestAdapter: HomePageInteractorOutputProtocol {
-    func onFetchWeatherInformationSuccess(weatherInformationList: [[CountryWeatherInformationModel]], cityName: String) {
-        
-    }
-    
-    func onFetchWeatherInformationFailure(errorMessage: String) {
-        
-    }
-}
-
 final class HomePageInteractor: HomePageInteractorProtocol {
     
     let repository: HomePageRepositoryProtocol
