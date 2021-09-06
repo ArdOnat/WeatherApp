@@ -18,14 +18,14 @@ class URLSessionNetworkLayer: NetworkLayer {
         self.defaultBodyParameters = defaultBodyParameters
     }
     
-    func request<T>(_ request: Request, queue: DispatchQueue?, completion: @escaping (Result<T, NetworkError>) -> ()) where T : Decodable {
+    func request<T>(_ request: Request, queue: DispatchQueue = .main, completion: @escaping (Result<T, NetworkError>) -> ()) where T : Decodable {
 
         guard let request = try? self.buildRequest(from: request) else {
             return completion(.failure(.invalidRequest))
         }
         
-        
-        let task = URLSession.shared.dataTask(with: request, completionHandler: { (data, response, error) in
+        queue.async {
+            let task = URLSession.shared.dataTask(with: request, completionHandler: { (data, response, error) in
                     if let _ = error {
                         completion(.failure(.custom(errorText: error?.localizedDescription ?? "An error occured")))
                     }
@@ -41,7 +41,7 @@ class URLSessionNetworkLayer: NetworkLayer {
                         else {
                             completion(.failure(.custom(errorText: "Invalid response.")))
                         }
-                    
+                        
                         if let data = data {
                             let response = try? JSONDecoder().decode(T.self, from: data)
                             
@@ -54,7 +54,9 @@ class URLSessionNetworkLayer: NetworkLayer {
                         }
                     }
                 })
-                task.resume()
+            task.resume()
+        }
+
     }
     
     fileprivate func buildRequest(from requestToMake: NetworkModule.Request) throws -> URLRequest {

@@ -19,12 +19,12 @@ class AFNetworkLayer: NetworkLayer {
         self.defaultBodyParameters = defaultBodyParameters
     }
     
-    func request<T>(_ request: NetworkModule.Request, queue: DispatchQueue?, completion: @escaping (Result<T, NetworkError>) -> ()) where T : Decodable {
+    func request<T>(_ request: NetworkModule.Request, queue: DispatchQueue = .main, completion: @escaping (Result<T, NetworkError>) -> ()) where T : Decodable {
         guard let request = try? self.buildRequest(from: request) else {
             return completion(.failure(.invalidRequest))
         }
         
-        AF.request(request).validate().responseDecodable(of: T.self) { response in
+        AF.request(request).validate().responseDecodable(of: T.self, queue: queue) { response in
             switch response.result {
             case .success(let decodableResult):
                 completion(.success(decodableResult))
