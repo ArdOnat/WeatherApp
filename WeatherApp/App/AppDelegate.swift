@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import NetworkModule
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,7 +18,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
         guard window != nil else { return  false }
-        let homeViewController = HomePageModuleBuilder.generate(networkLayer: URLSessionNetworkLayer(defaultURLParameters: ["appid": "4325b9f55f7d320b4237e7f840be9567"] , defaultBodyParameters: nil))
+        
+        
+        // MARK: Setup ApiClient
+        ApiClient.setup(ApiClient.DefaultParameterConfig(defaultURLParameters: ["appid": "4325b9f55f7d320b4237e7f840be9567"]))
+        
+        let homeViewController = HomePageModuleBuilder.generate()
         let navigationController = UINavigationController(rootViewController: homeViewController)
         navigationController.setNavigationBarHidden(true, animated: false)
         self.window?.rootViewController = navigationController

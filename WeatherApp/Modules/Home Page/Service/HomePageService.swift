@@ -8,76 +8,74 @@
 
 import NetworkModule
 
-enum HomePageRequest: Request {
+protocol HomePageServiceProtocol {
+    var homeApi: HomeApi { get }
+    var output: HomePageServiceOutputProtocol? { get set }
     
-    case fetchWeatherDataWithCityName(cityName: String)
-    case fetchWeatherDataWithCoordinates(latitude: Double, longitude: Double)
-    
-    var path: String {
-        switch self {
-        case .fetchWeatherDataWithCityName(_):
-            return "forecast"
-        case .fetchWeatherDataWithCoordinates(_, _):
-            return "forecast"
-        }
-    }
-    
-    var apiEnvironment: ApiEnvironment {
-        switch self {
-        case .fetchWeatherDataWithCityName(_): return WeatherForecastApi(WeatherForecastNetworkEnvironment.prod)
-        case .fetchWeatherDataWithCoordinates(_, _): return WeatherForecastApi(WeatherForecastNetworkEnvironment.prod)
-        }
-    }
-    
-    var httpMethod: HTTPMethods {
-        return .get
-    }
-    
-    var urlParameters: Parameters? {
-        switch self {
-        case .fetchWeatherDataWithCityName(let cityName):
-            var urlParameters: Parameters = Parameters()
-            urlParameters["q"] = cityName
-            urlParameters["units"] = "metric"
-            
-            return urlParameters
-        case .fetchWeatherDataWithCoordinates(let latitude, let longitude):
-            var urlParameters: Parameters = Parameters()
-            urlParameters["lat"] = "\(latitude)"
-            urlParameters["lon"] = "\(longitude)"
-            urlParameters["units"] = "metric"
-            
-            return urlParameters
-        }
-    }
-    
-    var bodyParameters: Parameters? {
-        return nil
-    }
-    
-    var httpHeaders: HTTPHeaders? {
-        return nil
-    }
+    func fetchWeatherData(cityName: String)
+    func fetchWeatherData(latitude: Double, longitude: Double)
 }
 
-protocol HomePageServiceProtocol {
-    func fetchWeatherData(cityName: String, completion: @escaping (Result<WeatherInformationResponseModel, NetworkError>) -> ())
-    func fetchWeatherData(latitude: Double, longitude: Double, completion: @escaping (Result<WeatherInformationResponseModel, NetworkError>) -> ())
+protocol HomeApi {
+    func fetchWeatherDataWithCityName(cityName: String, completion: @escaping (Result<WeatherInformationResponseModel, NetworkError>) -> Void)
+    func fetchWeatherDataWithCoordinates(latitude: Double, longitude: Double, completion: @escaping (Result<WeatherInformationResponseModel, NetworkError>) -> Void)
 }
+
+protocol HomePageServiceOutputProtocol {
+    func onFetchWeatherInformationSuccess(response: WeatherInformationResponseModel)
+    func onFetchWeatherInformationFailure(error: Error)
+}
+
 
 final class HomePageService: HomePageServiceProtocol {
     
-    init (networkLayer: NetworkLayer) {
-        self.networkLayer = networkLayer
+    let homeApi: HomeApi
+    var output: HomePageServiceOutputProtocol?
+    
+    init(homeApi: HomeApi) {
+        self.homeApi = homeApi
     }
     
-    var networkLayer: NetworkLayer?
-    
-    func fetchWeatherData(cityName: String, completion: @escaping (Result<WeatherInformationResponseModel, NetworkError>) -> ()) {
-        networkLayer?.request(HomePageRequest.fetchWeatherDataWithCityName(cityName: cityName), completion: completion)
+    func fetchWeatherData(cityName: String) {
+        homeApi.fetchWeatherDataWithCityName(cityName: cityName) { result in
+            switch result {
+            case .success(let response):
+                self.output?.onFetchWeatherInformationSuccess(response: response)
+            case .failure(let error):
+                self.output?.onFetchWeatherInformationFailure(error: error)
+            }
+        }
+    }
+
+    func fetchWeatherData(latitude: Double, longitude: Double) {
+        homeApi.fetchWeatherDataWithCoordinates(latitude: latitude, longitude: longitude) { result in
+            switch result {
+            case .success(let response):
+                self.output?.onFetchWeatherInformationSuccess(response: response)
+            case .failure(let error):
+                self.output?.onFetchWeatherInformationFailure(error: error)
+            }
+        }
+    }
+}
+
+extension ApiClient: HomeApi {
+    func fetchWeatherDataWithCityName(cityName: String, completion: @escaping (Result<WeatherInformationResponseModel, NetworkError>) -> Void) {
+        self.request(HomePageRequest.fetchWeatherDataWithCityName(cityName: cityName), completion: completion)
     }
     
-    func fetchWeatherData(latitude: Double, longitude: Double, completion: @escaping (Result<WeatherInformationResponseModel, NetworkError>) -> ()) {
-        networkLayer?.request(HomePageRequest.fetchWeatherDataWithCoordinates(latitude: latitude, longitude: longitude), completion: completion)
+    func fetchWeatherDataWithCoordinates(latitude: Double, longitude: Double, completion: @escaping (Result<WeatherInformationResponseModel, NetworkError>) -> Void) {
+        self.request(HomePageRequest.fetchWeatherDataWithCoordinates(latitude: latitude, longitude: longitude), completion: completion)
+    }
+}
+
+extension WeakRef: HomePageServiceOutputProtocol where T: HomePageServiceOutputProtocol {
+    
+    func onFetchWeatherInformationSuccess(response: WeatherInformationResponseModel) {
+        object?.onFetchWeatherInformationSuccess(response: response)
+    }
+    
+    func onFetchWeatherInformationFailure(error: Error) {
+        object?.onFetchWeatherInformationFailure(error: error)
     }
 }

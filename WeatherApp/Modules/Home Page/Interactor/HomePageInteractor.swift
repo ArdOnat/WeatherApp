@@ -7,7 +7,7 @@
 //
 
 protocol HomePageInteractorProtocol {
-    var repository: HomePageRepositoryProtocol { get }
+    var service: HomePageServiceProtocol { get }
     var output: HomePageInteractorOutputProtocol? { get set }
     
     func fetchWeatherData(with cityName: String)
@@ -21,20 +21,20 @@ protocol HomePageInteractorOutputProtocol {
 
 final class HomePageInteractor: HomePageInteractorProtocol {
     
-    let repository: HomePageRepositoryProtocol
+    let service: HomePageServiceProtocol
     var output: HomePageInteractorOutputProtocol?
     
     // MARK: Initializers
-    init(repository: HomePageRepositoryProtocol) {
-        self.repository = repository
+    init(service: HomePageServiceProtocol) {
+        self.service = service
     }
     
     func fetchWeatherData(with cityName: String) {
-        repository.fetchWeatherData(cityName: cityName)
+        service.fetchWeatherData(cityName: cityName)
     }
     
     func fetchWeatherData(latitude: Double, longitude: Double) {
-        repository.fetchWeatherData(latitude: latitude, longitude: longitude)
+        service.fetchWeatherData(latitude: latitude, longitude: longitude)
     }
     
     /// Splits weather information data into different days.
@@ -62,7 +62,7 @@ final class HomePageInteractor: HomePageInteractorProtocol {
     }
 }
 
-extension HomePageInteractor: HomePageRepositoryOutputProtocol {
+extension HomePageInteractor: HomePageServiceOutputProtocol {
     
     func onFetchWeatherInformationSuccess(response: WeatherInformationResponseModel) {
         output?.onFetchWeatherInformationSuccess(weatherInformationList: prepareWeatherInformationData(weatherInformationModelArray: response.list), cityName: response.city.name)

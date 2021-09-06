@@ -10,6 +10,7 @@
 		4C39DCF926D4FF93000317F8 /* String+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C39DCF826D4FF93000317F8 /* String+Date.swift */; };
 		4C39DCFC26D515DA000317F8 /* URLSessionNetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C39DCFB26D515DA000317F8 /* URLSessionNetworkLayer.swift */; };
 		4C39DCFE26D51C82000317F8 /* WeakRefTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C39DCFD26D51C82000317F8 /* WeakRefTests.swift */; };
+		4C79DE6626E6AA9C00CB8481 /* HomePageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C79DE6526E6AA9C00CB8481 /* HomePageRequest.swift */; };
 		4CA335F626D27AEC00EBE252 /* UIViewController+Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA335F526D27AEC00EBE252 /* UIViewController+Toast.swift */; };
 		4CA335F826D27C8D00EBE252 /* WeakRef.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA335F726D27C8D00EBE252 /* WeakRef.swift */; };
 		4CC1064726CF9130001432B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC1064626CF9130001432B7 /* AppDelegate.swift */; };
@@ -19,7 +20,6 @@
 		4CC1067F26CF96D0001432B7 /* HomePageModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC1067726CF96D0001432B7 /* HomePageModuleBuilder.swift */; };
 		4CC1068026CF96D0001432B7 /* HomePagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC1067826CF96D0001432B7 /* HomePagePresenter.swift */; };
 		4CC1068126CF96D0001432B7 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC1067926CF96D0001432B7 /* HomePageViewController.swift */; };
-		4CC1068226CF96D0001432B7 /* HomePageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC1067A26CF96D0001432B7 /* HomePageRepository.swift */; };
 		4CC1068326CF96D0001432B7 /* HomePageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC1067B26CF96D0001432B7 /* HomePageInteractor.swift */; };
 		4CC1068426CF96D0001432B7 /* HomePageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CC1067C26CF96D0001432B7 /* HomePageViewController.xib */; };
 		4CC1068526CF96D0001432B7 /* HomePageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC1067D26CF96D0001432B7 /* HomePageService.swift */; };
@@ -49,6 +49,7 @@
 		4C39DCF826D4FF93000317F8 /* String+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Date.swift"; sourceTree = "<group>"; };
 		4C39DCFB26D515DA000317F8 /* URLSessionNetworkLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionNetworkLayer.swift; sourceTree = "<group>"; };
 		4C39DCFD26D51C82000317F8 /* WeakRefTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakRefTests.swift; sourceTree = "<group>"; };
+		4C79DE6526E6AA9C00CB8481 /* HomePageRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageRequest.swift; sourceTree = "<group>"; };
 		4CA335F526D27AEC00EBE252 /* UIViewController+Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Toast.swift"; sourceTree = "<group>"; };
 		4CA335F726D27C8D00EBE252 /* WeakRef.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakRef.swift; sourceTree = "<group>"; };
 		4CC1064326CF9130001432B7 /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,7 +65,6 @@
 		4CC1067726CF96D0001432B7 /* HomePageModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageModuleBuilder.swift; sourceTree = "<group>"; };
 		4CC1067826CF96D0001432B7 /* HomePagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePagePresenter.swift; sourceTree = "<group>"; };
 		4CC1067926CF96D0001432B7 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
-		4CC1067A26CF96D0001432B7 /* HomePageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageRepository.swift; sourceTree = "<group>"; };
 		4CC1067B26CF96D0001432B7 /* HomePageInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageInteractor.swift; sourceTree = "<group>"; };
 		4CC1067C26CF96D0001432B7 /* HomePageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomePageViewController.xib; sourceTree = "<group>"; };
 		4CC1067D26CF96D0001432B7 /* HomePageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageService.swift; sourceTree = "<group>"; };
@@ -226,7 +226,6 @@
 				4CC1068926CFA81F001432B7 /* View Controller */,
 				4CC1068D26CFA845001432B7 /* Presenter */,
 				4CC1068E26CFA84B001432B7 /* Interactor */,
-				4CC1068C26CFA83C001432B7 /* Repository */,
 				4CC1068B26CFA837001432B7 /* Service */,
 				4CC1068A26CFA82F001432B7 /* Wireframe */,
 			);
@@ -266,16 +265,9 @@
 			isa = PBXGroup;
 			children = (
 				4CC1067D26CF96D0001432B7 /* HomePageService.swift */,
+				4C79DE6526E6AA9C00CB8481 /* HomePageRequest.swift */,
 			);
 			path = Service;
-			sourceTree = "<group>";
-		};
-		4CC1068C26CFA83C001432B7 /* Repository */ = {
-			isa = PBXGroup;
-			children = (
-				4CC1067A26CF96D0001432B7 /* HomePageRepository.swift */,
-			);
-			path = Repository;
 			sourceTree = "<group>";
 		};
 		4CC1068D26CFA845001432B7 /* Presenter */ = {
@@ -419,6 +411,7 @@
 				4CC1068626CF96D0001432B7 /* HomePageWireframe.swift in Sources */,
 				4CC1064726CF9130001432B7 /* AppDelegate.swift in Sources */,
 				4CA335F626D27AEC00EBE252 /* UIViewController+Toast.swift in Sources */,
+				4C79DE6626E6AA9C00CB8481 /* HomePageRequest.swift in Sources */,
 				4CA335F826D27C8D00EBE252 /* WeakRef.swift in Sources */,
 				4CC1068526CF96D0001432B7 /* HomePageService.swift in Sources */,
 				4CCEDA6926D119C100752913 /* WeatherInformationUITableViewCell.swift in Sources */,
@@ -427,7 +420,6 @@
 				4CC1068026CF96D0001432B7 /* HomePagePresenter.swift in Sources */,
 				4C39DCF926D4FF93000317F8 /* String+Date.swift in Sources */,
 				4CF5F08926D3E32300D585AF /* AFNetworkLayer.swift in Sources */,
-				4CC1068226CF96D0001432B7 /* HomePageRepository.swift in Sources */,
 				4CC1069426CFA9D9001432B7 /* WeatherForecastEnvironment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -707,7 +699,7 @@
 			repositoryURL = "https://github.com/ArdOnat/NetworkModule.git";
 			requirement = {
 				kind = revision;
-				revision = 8a710bf0c3d0d2bc3d2efaa77e723ae161ddd0b9;
+				revision = c46cb31d639b2215374dc0015a3b9fb9abf1b90a;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
