@@ -74,10 +74,10 @@ final class HomePageService: HomePageServiceProtocol {
     var networkLayer: NetworkLayer?
     
     func fetchWeatherData(cityName: String, completion: @escaping (Result<WeatherInformationResponseModel, NetworkError>) -> ()) {
-        networkLayer?.request(HomePageRequest.fetchWeatherDataWithCityName(cityName: cityName), queue: .main, completion: completion)
+        networkLayer?.request(HomePageRequest.fetchWeatherDataWithCityName(cityName: cityName), completion: completion)
     }
     
     func fetchWeatherData(latitude: Double, longitude: Double, completion: @escaping (Result<WeatherInformationResponseModel, NetworkError>) -> ()) {
-        networkLayer?.request(HomePageRequest.fetchWeatherDataWithCoordinates(latitude: latitude, longitude: longitude), queue: .main, completion: completion)
+        networkLayer?.request(HomePageRequest.fetchWeatherDataWithCoordinates(latitude: latitude, longitude: longitude), completion: completion)
     }
 }
