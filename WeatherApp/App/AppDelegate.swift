@@ -19,7 +19,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow(frame: UIScreen.main.bounds)
         guard window != nil else { return  false }
         
-        
         // MARK: Setup ApiClient
         ApiClient.setup(ApiClient.DefaultParameterConfig(defaultURLParameters: ["appid": "4325b9f55f7d320b4237e7f840be9567"]))
         

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4C39DCF926D4FF93000317F8 /* String+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C39DCF826D4FF93000317F8 /* String+Date.swift */; };
-		4C39DCFC26D515DA000317F8 /* URLSessionNetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C39DCFB26D515DA000317F8 /* URLSessionNetworkLayer.swift */; };
 		4C39DCFE26D51C82000317F8 /* WeakRefTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C39DCFD26D51C82000317F8 /* WeakRefTests.swift */; };
 		4C79DE6626E6AA9C00CB8481 /* HomePageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C79DE6526E6AA9C00CB8481 /* HomePageRequest.swift */; };
 		4CA335F626D27AEC00EBE252 /* UIViewController+Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA335F526D27AEC00EBE252 /* UIViewController+Toast.swift */; };
@@ -30,7 +29,6 @@
 		4CCEDA6A26D119C100752913 /* WeatherInformationUITableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CCEDA6826D119C100752913 /* WeatherInformationUITableViewCell.xib */; };
 		4CCEDA6D26D136A800752913 /* HourlyDataCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCEDA6B26D136A800752913 /* HourlyDataCollectionViewCell.swift */; };
 		4CCEDA6E26D136A800752913 /* HourlyDataCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CCEDA6C26D136A800752913 /* HourlyDataCollectionViewCell.xib */; };
-		4CF5F08926D3E32300D585AF /* AFNetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF5F08826D3E32300D585AF /* AFNetworkLayer.swift */; };
 		4CF5F08C26D3E49100D585AF /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 4CF5F08B26D3E49100D585AF /* Alamofire */; };
 		4CF5F09226D41F1D00D585AF /* NetworkModule in Frameworks */ = {isa = PBXBuildFile; productRef = 4CF5F09126D41F1D00D585AF /* NetworkModule */; };
 /* End PBXBuildFile section */
@@ -47,7 +45,6 @@
 
 /* Begin PBXFileReference section */
 		4C39DCF826D4FF93000317F8 /* String+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Date.swift"; sourceTree = "<group>"; };
-		4C39DCFB26D515DA000317F8 /* URLSessionNetworkLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionNetworkLayer.swift; sourceTree = "<group>"; };
 		4C39DCFD26D51C82000317F8 /* WeakRefTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakRefTests.swift; sourceTree = "<group>"; };
 		4C79DE6526E6AA9C00CB8481 /* HomePageRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageRequest.swift; sourceTree = "<group>"; };
 		4CA335F526D27AEC00EBE252 /* UIViewController+Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Toast.swift"; sourceTree = "<group>"; };
@@ -75,7 +72,6 @@
 		4CCEDA6826D119C100752913 /* WeatherInformationUITableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeatherInformationUITableViewCell.xib; sourceTree = "<group>"; };
 		4CCEDA6B26D136A800752913 /* HourlyDataCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyDataCollectionViewCell.swift; sourceTree = "<group>"; };
 		4CCEDA6C26D136A800752913 /* HourlyDataCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HourlyDataCollectionViewCell.xib; sourceTree = "<group>"; };
-		4CF5F08826D3E32300D585AF /* AFNetworkLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AFNetworkLayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +97,6 @@
 		4C39DCFA26D4FFA1000317F8 /* NetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
-				4CF5F08826D3E32300D585AF /* AFNetworkLayer.swift */,
-				4C39DCFB26D515DA000317F8 /* URLSessionNetworkLayer.swift */,
 			);
 			path = NetworkLayer;
 			sourceTree = "<group>";
@@ -416,10 +410,8 @@
 				4CC1068526CF96D0001432B7 /* HomePageService.swift in Sources */,
 				4CCEDA6926D119C100752913 /* WeatherInformationUITableViewCell.swift in Sources */,
 				4CC1067F26CF96D0001432B7 /* HomePageModuleBuilder.swift in Sources */,
-				4C39DCFC26D515DA000317F8 /* URLSessionNetworkLayer.swift in Sources */,
 				4CC1068026CF96D0001432B7 /* HomePagePresenter.swift in Sources */,
 				4C39DCF926D4FF93000317F8 /* String+Date.swift in Sources */,
-				4CF5F08926D3E32300D585AF /* AFNetworkLayer.swift in Sources */,
 				4CC1069426CFA9D9001432B7 /* WeatherForecastEnvironment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -698,8 +690,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ArdOnat/NetworkModule.git";
 			requirement = {
-				kind = revision;
-				revision = c46cb31d639b2215374dc0015a3b9fb9abf1b90a;
+				branch = version/ApiClient;
+				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

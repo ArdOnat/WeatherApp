@@ -14,8 +14,8 @@
         "package": "NetworkModule",
         "repositoryURL": "https://github.com/ArdOnat/NetworkModule.git",
         "state": {
-          "branch": null,
-          "revision": "c46cb31d639b2215374dc0015a3b9fb9abf1b90a",
+          "branch": "version/ApiClient",
+          "revision": "a9aae2b3d8ab24632acf48ce7cc6be36aada597c",
           "version": null
         }
       }
