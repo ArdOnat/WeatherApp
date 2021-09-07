@@ -11,12 +11,21 @@
         }
       },
       {
+        "package": "ApiClient",
+        "repositoryURL": "https://github.com/ArdOnat/ApiClient.git",
+        "state": {
+          "branch": null,
+          "revision": "477a93f3ad41a1d05ee907c458ce34cf10f198a1",
+          "version": "1.0.0"
+        }
+      },
+      {
         "package": "NetworkModule",
         "repositoryURL": "https://github.com/ArdOnat/NetworkModule.git",
         "state": {
-          "branch": "version/ApiClient",
-          "revision": "a9aae2b3d8ab24632acf48ce7cc6be36aada597c",
-          "version": null
+          "branch": null,
+          "revision": "f0880896e209dfdc1e9260b870126dd9476dcef3",
+          "version": "1.0.1"
         }
       }
     ]

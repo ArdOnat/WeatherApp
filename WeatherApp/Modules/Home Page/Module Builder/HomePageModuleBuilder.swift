@@ -6,13 +6,11 @@
 //  Copyright (c) 2021 ___ORGANIZATIONNAME___. All rights reserved.
 //
 
-import NetworkModule
-
 final class HomePageModuleBuilder {
     
-    static func generate() -> HomePageViewController {
+    static func generate(homeApi: HomeApi) -> HomePageViewController {
         let wireframe: HomePageWireframeProtocol = HomePageWireframe()
-        var service: HomePageServiceProtocol = HomePageService(homeApi: ApiClient.shared)
+        var service: HomePageServiceProtocol = HomePageService(homeApi: homeApi)
         let interactor: HomePageInteractor = HomePageInteractor(service: service)
         let presenter: HomePagePresenter = HomePagePresenter(interactor: interactor, wireframe: wireframe)
         let view: HomePageViewController = HomePageViewController(presenter: presenter)

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C2AD53D26E7E7B90000786A /* ApiClient in Frameworks */ = {isa = PBXBuildFile; productRef = 4C2AD53C26E7E7B90000786A /* ApiClient */; };
 		4C39DCF926D4FF93000317F8 /* String+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C39DCF826D4FF93000317F8 /* String+Date.swift */; };
 		4C39DCFE26D51C82000317F8 /* WeakRefTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C39DCFD26D51C82000317F8 /* WeakRefTests.swift */; };
 		4C79DE6626E6AA9C00CB8481 /* HomePageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C79DE6526E6AA9C00CB8481 /* HomePageRequest.swift */; };
@@ -29,7 +30,6 @@
 		4CCEDA6A26D119C100752913 /* WeatherInformationUITableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CCEDA6826D119C100752913 /* WeatherInformationUITableViewCell.xib */; };
 		4CCEDA6D26D136A800752913 /* HourlyDataCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCEDA6B26D136A800752913 /* HourlyDataCollectionViewCell.swift */; };
 		4CCEDA6E26D136A800752913 /* HourlyDataCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CCEDA6C26D136A800752913 /* HourlyDataCollectionViewCell.xib */; };
-		4CF5F08C26D3E49100D585AF /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 4CF5F08B26D3E49100D585AF /* Alamofire */; };
 		4CF5F09226D41F1D00D585AF /* NetworkModule in Frameworks */ = {isa = PBXBuildFile; productRef = 4CF5F09126D41F1D00D585AF /* NetworkModule */; };
 /* End PBXBuildFile section */
 
@@ -79,7 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4CF5F08C26D3E49100D585AF /* Alamofire in Frameworks */,
+				4C2AD53D26E7E7B90000786A /* ApiClient in Frameworks */,
 				4CF5F09226D41F1D00D585AF /* NetworkModule in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,8 +305,8 @@
 			);
 			name = WeatherApp;
 			packageProductDependencies = (
-				4CF5F08B26D3E49100D585AF /* Alamofire */,
 				4CF5F09126D41F1D00D585AF /* NetworkModule */,
+				4C2AD53C26E7E7B90000786A /* ApiClient */,
 			);
 			productName = WeatherApp;
 			productReference = 4CC1064326CF9130001432B7 /* WeatherApp.app */;
@@ -358,8 +358,8 @@
 			);
 			mainGroup = 4CC1063A26CF9130001432B7;
 			packageReferences = (
-				4CF5F08A26D3E49100D585AF /* XCRemoteSwiftPackageReference "Alamofire" */,
 				4CF5F09026D41F1D00D585AF /* XCRemoteSwiftPackageReference "NetworkModule" */,
+				4C2AD53B26E7E7B90000786A /* XCRemoteSwiftPackageReference "ApiClient" */,
 			);
 			productRefGroup = 4CC1064426CF9130001432B7 /* Products */;
 			projectDirPath = "";
@@ -678,29 +678,29 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		4CF5F08A26D3E49100D585AF /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+		4C2AD53B26E7E7B90000786A /* XCRemoteSwiftPackageReference "ApiClient" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			repositoryURL = "https://github.com/ArdOnat/ApiClient.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 5.4.3;
+				minimumVersion = 1.0.0;
 			};
 		};
 		4CF5F09026D41F1D00D585AF /* XCRemoteSwiftPackageReference "NetworkModule" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ArdOnat/NetworkModule.git";
 			requirement = {
-				branch = version/ApiClient;
-				kind = branch;
+				kind = exactVersion;
+				version = 1.0.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		4CF5F08B26D3E49100D585AF /* Alamofire */ = {
+		4C2AD53C26E7E7B90000786A /* ApiClient */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 4CF5F08A26D3E49100D585AF /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
+			package = 4C2AD53B26E7E7B90000786A /* XCRemoteSwiftPackageReference "ApiClient" */;
+			productName = ApiClient;
 		};
 		4CF5F09126D41F1D00D585AF /* NetworkModule */ = {
 			isa = XCSwiftPackageProductDependency;

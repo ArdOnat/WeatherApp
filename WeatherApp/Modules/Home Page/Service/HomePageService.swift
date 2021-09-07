@@ -59,16 +59,6 @@ final class HomePageService: HomePageServiceProtocol {
     }
 }
 
-extension ApiClient: HomeApi {
-    func fetchWeatherDataWithCityName(cityName: String, completion: @escaping (Result<WeatherInformationResponseModel, NetworkError>) -> Void) {
-        self.request(HomePageRequest.fetchWeatherDataWithCityName(cityName: cityName), completion: completion)
-    }
-    
-    func fetchWeatherDataWithCoordinates(latitude: Double, longitude: Double, completion: @escaping (Result<WeatherInformationResponseModel, NetworkError>) -> Void) {
-        self.request(HomePageRequest.fetchWeatherDataWithCoordinates(latitude: latitude, longitude: longitude), completion: completion)
-    }
-}
-
 extension WeakRef: HomePageServiceOutputProtocol where T: HomePageServiceOutputProtocol {
     
     func onFetchWeatherInformationSuccess(response: WeatherInformationResponseModel) {
