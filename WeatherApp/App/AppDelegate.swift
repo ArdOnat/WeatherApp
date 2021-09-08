@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import NetworkModule
+import CoreModule
 import ApiClient
 
 @main

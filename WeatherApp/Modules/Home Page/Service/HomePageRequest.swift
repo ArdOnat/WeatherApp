@@ -5,7 +5,7 @@
 //  Created by Arda Onat on 6.09.2021.
 //
 
-import NetworkModule
+import CoreModule
 
 enum HomePageRequest: Request {
     

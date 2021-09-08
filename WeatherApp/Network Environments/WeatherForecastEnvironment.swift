@@ -5,7 +5,7 @@
 //  Created by Arda Onat on 20.08.2021.
 //
 
-import NetworkModule
+import CoreModule
 
 struct WeatherForecastApi: ApiEnvironment {
     var environmentType: NetworkEnvironment

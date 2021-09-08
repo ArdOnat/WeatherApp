@@ -6,7 +6,7 @@
 //  Copyright (c) 2021 ___ORGANIZATIONNAME___. All rights reserved.
 //
 
-import NetworkModule
+import CoreModule
 
 protocol HomePageServiceProtocol {
     var homeApi: HomeApi { get }

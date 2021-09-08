@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreLocation
+import CoreModule
 
 enum ViewState {
     case loading

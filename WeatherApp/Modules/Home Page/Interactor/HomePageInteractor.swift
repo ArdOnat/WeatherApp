@@ -6,6 +6,8 @@
 //  Copyright (c) 2021 ___ORGANIZATIONNAME___. All rights reserved.
 //
 
+import CoreModule
+
 protocol HomePageInteractorProtocol {
     var service: HomePageServiceProtocol { get }
     var output: HomePageInteractorOutputProtocol? { get set }
