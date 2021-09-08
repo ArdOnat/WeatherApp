@@ -7,14 +7,6 @@
 
 import CoreModule
 
-struct WeatherForecastApi: ApiEnvironment {
-    var environmentType: NetworkEnvironment
-    
-    init(_ environmentType: NetworkEnvironment) {
-        self.environmentType = environmentType
-    }
-}
-
 enum WeatherForecastNetworkEnvironment: NetworkEnvironment {
     case prod
     
