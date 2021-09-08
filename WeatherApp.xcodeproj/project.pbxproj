@@ -578,8 +578,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ArdOnat/HomeModule.git";
 			requirement = {
-				kind = revision;
-				revision = a2f334339eb6617d71c62d261ab2874567e7febf;
+				kind = exactVersion;
+				version = 1.1.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
