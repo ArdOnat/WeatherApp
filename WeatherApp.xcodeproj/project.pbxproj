@@ -83,13 +83,6 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
-		4CA335FA26D2A7EB00EBE252 /* Entity */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Entity;
-			sourceTree = "<group>";
-		};
 		4CA335FB26D2A7F700EBE252 /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -139,8 +132,6 @@
 				4CA335FB26D2A7F700EBE252 /* App */,
 				4CC1068F26CFA90D001432B7 /* Network Environments */,
 				4CA335F926D2A7DA00EBE252 /* Common */,
-				4CC1067626CF96B7001432B7 /* Modules */,
-				4CA335FA26D2A7EB00EBE252 /* Entity */,
 				4CA335FC26D2A89F00EBE252 /* Supporting Files */,
 				4CA335FD26D2A8AC00EBE252 /* Resources */,
 				4CC1065426CF9131001432B7 /* Info.plist */,
@@ -164,13 +155,6 @@
 				4CC1066A26CF9132001432B7 /* Info.plist */,
 			);
 			path = WeatherAppUITests;
-			sourceTree = "<group>";
-		};
-		4CC1067626CF96B7001432B7 /* Modules */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Modules;
 			sourceTree = "<group>";
 		};
 		4CC1068F26CFA90D001432B7 /* Network Environments */ = {
