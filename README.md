@@ -9,13 +9,10 @@ In WeatherApp, I focused on Uncle Bob's Clean Architecture principles. (https://
 
 I designed 4 different modules for having clean and scalable modules.
 
-1 - Core Module (Yellow Layer of Uncle Bob's Architecture)
-Module that keeps entities
-
-
-
-
 <img width="843" alt="Screen Shot 2021-09-07 at 22 19 55" src="https://user-images.githubusercontent.com/37045606/132953531-47c026bf-a79d-4341-a3e7-ac657cae1558.png">
+
+1 - Core Module (Yellow Layer of Uncle Bob's Architecture)
+Module that keeps entities that will be used by multiple modules. In Clean Architecture principle, it is very important that these entities do not depend on any other moduoe.
 
 
 
