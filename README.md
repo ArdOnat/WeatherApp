@@ -26,11 +26,11 @@ Before using ApiClient.shared, ApiCient has to be set up with default url and bo
 
 ![Screen Shot 2021-09-12 at 15 06 33](https://user-images.githubusercontent.com/37045606/132986919-293cbdd8-e0d5-4c39-8e87-e9b6a5efffad.png)
 
-In application's main module, enums that conform to the NetworkEnvironment protocol have to be created for each API environment that the application will interact with.(For WeatherApp only WeeatherForecastEnvironment is needed.)
+In application's main module, enums that conform to the NetworkEnvironment protocol have to be created for each API environment that the application will interact with.(For WeatherApp only WeeatherForecastEnvironment is needed.) Each NetworkEnvironment 
 
 <img width="535" alt="WeatherForecastEnvironment swift" src="https://user-images.githubusercontent.com/37045606/132987624-8bee6d39-1c0a-439e-a81a-17ce4901c77f.png">
 
-ApiClient has to be extended in main application, to fulfill each UI Module's ApiClient needs. These extensions has to initialize requests that UI Module needs using the ApiEnvironment that is initialized with NetworkEnvironment. With this operation, ApiClient is going to have the knowledge of which request will be sent to which NetworkEnvironment. After request initialization is completed, this request value has to be passed to ApiClient's generic request function.
+ApiClient has to be extended in main application, to fulfill each UI Module's ApiClient needs. These extensions will be used to initialize requests that UI Module needs using the ApiEnvironment that is initialized with NetworkEnvironment. With this operation, ApiClient is going to have the knowledge of which request will be sent to which NetworkEnvironment. After request initialization is completed, this request value has to be passed to ApiClient's generic request function.
 
 ![Screen Shot 2021-09-12 at 15 10 56](https://user-images.githubusercontent.com/37045606/132987038-92f0936c-cfe3-431d-83a2-34d7ab645b1f.png)
 
