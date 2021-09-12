@@ -8,7 +8,7 @@ In WeatherApp, I focused on Uncle Bob's Clean Architecture principles. (https://
 
 I designed 4 different modules for having clean, scalable, testable modules that do not have unnecessary dependencies to other modules or third party libraries..
 
-<img width="843" alt="Screen Shot 2021-09-07 at 22 19 55" src="https://user-images.githubusercontent.com/37045606/132953531-47c026bf-a79d-4341-a3e7-ac657cae1558.png">
+<img width="1243" alt="Screen Shot 2021-09-09 at 13 13 26" src="https://user-images.githubusercontent.com/37045606/132987445-b8fd6c56-bd47-45e1-beb8-c2506ef009cc.png">
 
 1 - [Core Module](https://github.com/ArdOnat/CoreModule) - (Yellow Layer of Uncle Bob's Architecture)
 Module that keeps entities that will be used by multiple modules. In Clean Architecture principle, it is very important that these entities do not depend on any other module.
