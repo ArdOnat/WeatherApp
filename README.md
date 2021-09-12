@@ -12,7 +12,7 @@ I designed 4 different modules for having clean, scalable, testable modules that
 
 
 1 - [Core Module](https://github.com/ArdOnat/CoreModule) - (Yellow Layer in Uncle Bob's Architecture)
-Module that keeps entities that will be used by multiple modules. In Clean Architecture principle, it is very important that these entities do not depend on any other module.
+Module that keeps entities that will be used by multiple modules. In Clean Architecture principle, it is very important that these entities do not depend on any other module or third party library.
 
 
 2 - [ApiClient Module](https://github.com/ArdOnat/ApiClient) - (Green Layer in Uncle Bob's Architecture)
