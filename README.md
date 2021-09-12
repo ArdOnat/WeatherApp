@@ -52,4 +52,4 @@ Each UI Module has an service class (In HomeModule -> HomeService) that defines 
 
 ![Screen Shot 2021-09-12 at 15 50 30](https://user-images.githubusercontent.com/37045606/132988218-c047c388-d0bb-4b36-9028-6efaf238f6b9.png)
 
-Service module does not hold any references to any third party library or ApiClient module or any concrete type. So if needed or desired, ApiClient can be changed with any other network module that conforms to the HomeApi protocol which opens up a lot of opportunities.
+Service module does not hold any references to any third party library, ApiClient, or any concrete type. So if needed or desired, ApiClient can be changed with any other network module that conforms to the HomeApi protocol which opens up a lot of opportunities.
