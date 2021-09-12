@@ -15,8 +15,8 @@
         "repositoryURL": "https://github.com/ArdOnat/ApiClient.git",
         "state": {
           "branch": null,
-          "revision": "6a0b8726fc8adcb9321c60dd103b19e246b16ef8",
-          "version": "1.1.1"
+          "revision": "a449450946838b6e5035a343a6ad58ea9b031b85",
+          "version": "1.1.3"
         }
       },
       {
@@ -24,8 +24,8 @@
         "repositoryURL": "https://github.com/ArdOnat/CoreModule.git",
         "state": {
           "branch": null,
-          "revision": "780070fb5546cb5fabe59904d414844fdd332abb",
-          "version": "1.1.1"
+          "revision": "a3225335006c157ed007205a56a7e722c4961650",
+          "version": "1.1.2"
         }
       },
       {
@@ -33,8 +33,8 @@
         "repositoryURL": "https://github.com/ArdOnat/HomeModule.git",
         "state": {
           "branch": null,
-          "revision": "a2f334339eb6617d71c62d261ab2874567e7febf",
-          "version": "1.1.0"
+          "revision": "a11a2bef2e70474a026b44522b6d57d52b4a736d",
+          "version": "1.1.2"
         }
       }
     ]

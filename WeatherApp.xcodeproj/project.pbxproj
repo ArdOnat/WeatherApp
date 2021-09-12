@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4C2AD53D26E7E7B90000786A /* ApiClient in Frameworks */ = {isa = PBXBuildFile; productRef = 4C2AD53C26E7E7B90000786A /* ApiClient */; };
 		4C3AE85726E9256900325E92 /* CoreModule in Frameworks */ = {isa = PBXBuildFile; productRef = 4C3AE85626E9256900325E92 /* CoreModule */; };
+		4C8B5E1226EE3E6B0007327C /* ApiClient in Frameworks */ = {isa = PBXBuildFile; productRef = 4C8B5E1126EE3E6B0007327C /* ApiClient */; };
 		4C98947026E94ABF0045E079 /* HomeModule in Frameworks */ = {isa = PBXBuildFile; productRef = 4C98946F26E94ABF0045E079 /* HomeModule */; };
 		4CC1064726CF9130001432B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC1064626CF9130001432B7 /* AppDelegate.swift */; };
 		4CC1065026CF9131001432B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CC1064F26CF9131001432B7 /* Assets.xcassets */; };
@@ -46,7 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C2AD53D26E7E7B90000786A /* ApiClient in Frameworks */,
+				4C8B5E1226EE3E6B0007327C /* ApiClient in Frameworks */,
 				4C3AE85726E9256900325E92 /* CoreModule in Frameworks */,
 				4C98947026E94ABF0045E079 /* HomeModule in Frameworks */,
 			);
@@ -168,9 +168,9 @@
 			);
 			name = WeatherApp;
 			packageProductDependencies = (
-				4C2AD53C26E7E7B90000786A /* ApiClient */,
 				4C3AE85626E9256900325E92 /* CoreModule */,
 				4C98946F26E94ABF0045E079 /* HomeModule */,
+				4C8B5E1126EE3E6B0007327C /* ApiClient */,
 			);
 			productName = WeatherApp;
 			productReference = 4CC1064326CF9130001432B7 /* WeatherApp.app */;
@@ -222,9 +222,9 @@
 			);
 			mainGroup = 4CC1063A26CF9130001432B7;
 			packageReferences = (
-				4C2AD53B26E7E7B90000786A /* XCRemoteSwiftPackageReference "ApiClient" */,
 				4C3AE85526E9256900325E92 /* XCRemoteSwiftPackageReference "CoreModule" */,
 				4C98946E26E94ABF0045E079 /* XCRemoteSwiftPackageReference "HomeModule" */,
+				4C8B5E1026EE3E6B0007327C /* XCRemoteSwiftPackageReference "ApiClient" */,
 			);
 			productRefGroup = 4CC1064426CF9130001432B7 /* Products */;
 			projectDirPath = "";
@@ -526,20 +526,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		4C2AD53B26E7E7B90000786A /* XCRemoteSwiftPackageReference "ApiClient" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ArdOnat/ApiClient.git";
-			requirement = {
-				kind = exactVersion;
-				version = 1.1.1;
-			};
-		};
 		4C3AE85526E9256900325E92 /* XCRemoteSwiftPackageReference "CoreModule" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ArdOnat/CoreModule.git";
 			requirement = {
 				kind = exactVersion;
-				version = 1.1.1;
+				version = 1.1.2;
+			};
+		};
+		4C8B5E1026EE3E6B0007327C /* XCRemoteSwiftPackageReference "ApiClient" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ArdOnat/ApiClient.git";
+			requirement = {
+				kind = exactVersion;
+				version = 1.1.3;
 			};
 		};
 		4C98946E26E94ABF0045E079 /* XCRemoteSwiftPackageReference "HomeModule" */ = {
@@ -547,21 +547,21 @@
 			repositoryURL = "https://github.com/ArdOnat/HomeModule.git";
 			requirement = {
 				kind = exactVersion;
-				version = 1.1.0;
+				version = 1.1.2;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		4C2AD53C26E7E7B90000786A /* ApiClient */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 4C2AD53B26E7E7B90000786A /* XCRemoteSwiftPackageReference "ApiClient" */;
-			productName = ApiClient;
-		};
 		4C3AE85626E9256900325E92 /* CoreModule */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 4C3AE85526E9256900325E92 /* XCRemoteSwiftPackageReference "CoreModule" */;
 			productName = CoreModule;
+		};
+		4C8B5E1126EE3E6B0007327C /* ApiClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4C8B5E1026EE3E6B0007327C /* XCRemoteSwiftPackageReference "ApiClient" */;
+			productName = ApiClient;
 		};
 		4C98946F26E94ABF0045E079 /* HomeModule */ = {
 			isa = XCSwiftPackageProductDependency;
