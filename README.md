@@ -13,7 +13,7 @@ I designed 4 different modules for having clean, scalable, testable modules that
 1 - [Core Module](https://github.com/ArdOnat/CoreModule) - (Yellow Layer of Uncle Bob's Architecture)
 Module that keeps entities that will be used by multiple modules. In Clean Architecture principle, it is very important that these entities do not depend on any other module.
 
-2 - [ApiClient Module](https://github.com/ArdOnat/ApiClient) - (Red Layer of Uncle Bob's Aarchitecture)
+2 - [ApiClient Module](https://github.com/ArdOnat/ApiClient) - (Green Layer of Uncle Bob's Aarchitecture)
 Module that is responsible for making network requests. It uses models and protocols that are defined in CoreModule. Also uses Alamofire library as helper. As Alamofire is only used as a helper and implementation of this module can be easily changed to other solutions like URLSession, without effecting other modules, dependency to Alamofire does not break the Clean Architecture rules.
 
 ApiClient uses Singleton as design pattern so it can not be manually initialized.
