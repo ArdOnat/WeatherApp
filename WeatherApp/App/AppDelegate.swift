@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         guard window != nil else { return  false }
         
         // MARK: Setup ApiClient
-        ApiClient.setup(ApiClient.DefaultParameterConfig(defaultURLParameters: ["appid": "4325b9f55f7d320b4237e7f840be9567"]))
+        ApiClient.setup(ApiClient.DefaultParameterConfig(defaultURLParameters: ["appid": ""])) // insert apikey here
         
         let homeViewController = HomePageModuleBuilder.generate(homeApi: ApiClient.shared)
         let navigationController = UINavigationController(rootViewController: homeViewController)
@@ -31,17 +31,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.makeKeyAndVisible()
         
         return true
-    }
-}
-
-extension ApiClient: HomeApi {
-    public func fetchWeatherDataWithCityName(cityName: String, completion: @escaping (Result<WeatherInformationResponseModel, NetworkError>) -> Void) {
-        let request = HomePageRequest(request: HomePageRequest.Request.fetchWeatherDataWithCityName(cityName: cityName), apiEnvironment: ApiEnvironment(environmentType: WeatherForecastNetworkEnvironment.prod))
-        self.request(request, completion: completion)
-    }
-    
-    public func fetchWeatherDataWithCoordinates(latitude: Double, longitude: Double, completion: @escaping (Result<WeatherInformationResponseModel, NetworkError>) -> Void) {
-        let request = HomePageRequest(request: HomePageRequest.Request.fetchWeatherDataWithCoordinates(latitude: latitude, longitude: longitude), apiEnvironment: ApiEnvironment(environmentType: WeatherForecastNetworkEnvironment.prod))
-        self.request(request, completion: completion)
     }
 }

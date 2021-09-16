@@ -15,6 +15,8 @@
 		4CC1065326CF9131001432B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CC1065126CF9131001432B7 /* LaunchScreen.storyboard */; };
 		4CC1065E26CF9132001432B7 /* WeatherAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC1065D26CF9132001432B7 /* WeatherAppTests.swift */; };
 		4CC1069426CFA9D9001432B7 /* WeatherForecastEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC1069326CFA9D9001432B7 /* WeatherForecastEnvironment.swift */; };
+		4CDC6AA826F27CB500000180 /* ApiClient+HomeApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDC6AA726F27CB500000180 /* ApiClient+HomeApi.swift */; };
+		4CDC6AAB26F27FC700000180 /* NavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDC6AAA26F27FC700000180 /* NavigationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +41,8 @@
 		4CC1066826CF9132001432B7 /* WeatherAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAppUITests.swift; sourceTree = "<group>"; };
 		4CC1066A26CF9132001432B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4CC1069326CFA9D9001432B7 /* WeatherForecastEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherForecastEnvironment.swift; sourceTree = "<group>"; };
+		4CDC6AA726F27CB500000180 /* ApiClient+HomeApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ApiClient+HomeApi.swift"; sourceTree = "<group>"; };
+		4CDC6AAA26F27FC700000180 /* NavigationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,16 +66,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4CA335F926D2A7DA00EBE252 /* Common */ = {
+		4CA335F926D2A7DA00EBE252 /* ApiClient */ = {
 			isa = PBXGroup;
 			children = (
+				4CDC6AA726F27CB500000180 /* ApiClient+HomeApi.swift */,
 			);
-			path = Common;
+			path = ApiClient;
 			sourceTree = "<group>";
 		};
 		4CA335FB26D2A7F700EBE252 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				4CDC6AA926F27FBC00000180 /* Navigation */,
 				4CC1064626CF9130001432B7 /* AppDelegate.swift */,
 			);
 			path = App;
@@ -117,7 +123,7 @@
 			children = (
 				4CA335FB26D2A7F700EBE252 /* App */,
 				4CC1068F26CFA90D001432B7 /* Network Environments */,
-				4CA335F926D2A7DA00EBE252 /* Common */,
+				4CA335F926D2A7DA00EBE252 /* ApiClient */,
 				4CA335FC26D2A89F00EBE252 /* Supporting Files */,
 				4CA335FD26D2A8AC00EBE252 /* Resources */,
 				4CC1065426CF9131001432B7 /* Info.plist */,
@@ -149,6 +155,14 @@
 				4CC1069326CFA9D9001432B7 /* WeatherForecastEnvironment.swift */,
 			);
 			path = "Network Environments";
+			sourceTree = "<group>";
+		};
+		4CDC6AA926F27FBC00000180 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				4CDC6AAA26F27FC700000180 /* NavigationManager.swift */,
+			);
+			path = Navigation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,7 +275,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CC1064726CF9130001432B7 /* AppDelegate.swift in Sources */,
+				4CDC6AAB26F27FC700000180 /* NavigationManager.swift in Sources */,
 				4CC1069426CFA9D9001432B7 /* WeatherForecastEnvironment.swift in Sources */,
+				4CDC6AA826F27CB500000180 /* ApiClient+HomeApi.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
