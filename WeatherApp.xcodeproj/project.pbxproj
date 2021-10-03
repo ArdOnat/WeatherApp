@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4C3AE85726E9256900325E92 /* CoreModule in Frameworks */ = {isa = PBXBuildFile; productRef = 4C3AE85626E9256900325E92 /* CoreModule */; };
+		4C43DA7B270A184A002A8A03 /* NavigationControllerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C43DA7A270A184A002A8A03 /* NavigationControllerRouter.swift */; };
+		4C43DA80270A273A002A8A03 /* NavigationControllerRouter+HomeNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C43DA7F270A273A002A8A03 /* NavigationControllerRouter+HomeNavigation.swift */; };
 		4C8B5E1226EE3E6B0007327C /* ApiClient in Frameworks */ = {isa = PBXBuildFile; productRef = 4C8B5E1126EE3E6B0007327C /* ApiClient */; };
 		4C98947026E94ABF0045E079 /* HomeModule in Frameworks */ = {isa = PBXBuildFile; productRef = 4C98946F26E94ABF0045E079 /* HomeModule */; };
 		4CC1064726CF9130001432B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC1064626CF9130001432B7 /* AppDelegate.swift */; };
@@ -16,7 +18,8 @@
 		4CC1065E26CF9132001432B7 /* WeatherAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC1065D26CF9132001432B7 /* WeatherAppTests.swift */; };
 		4CC1069426CFA9D9001432B7 /* WeatherForecastEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC1069326CFA9D9001432B7 /* WeatherForecastEnvironment.swift */; };
 		4CDC6AA826F27CB500000180 /* ApiClient+HomeApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDC6AA726F27CB500000180 /* ApiClient+HomeApi.swift */; };
-		4CDC6AAB26F27FC700000180 /* NavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDC6AAA26F27FC700000180 /* NavigationManager.swift */; };
+		4CDDFFA42709C66400156B90 /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDDFFA32709C66400156B90 /* ViewControllerFactory.swift */; };
+		4CDDFFA62709C73800156B90 /* iOSUIKitViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDDFFA52709C73800156B90 /* iOSUIKitViewControllerFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +33,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4C43DA7A270A184A002A8A03 /* NavigationControllerRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationControllerRouter.swift; sourceTree = "<group>"; };
+		4C43DA7F270A273A002A8A03 /* NavigationControllerRouter+HomeNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationControllerRouter+HomeNavigation.swift"; sourceTree = "<group>"; };
 		4CC1064326CF9130001432B7 /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CC1064626CF9130001432B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CC1064F26CF9131001432B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -42,7 +47,8 @@
 		4CC1066A26CF9132001432B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4CC1069326CFA9D9001432B7 /* WeatherForecastEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherForecastEnvironment.swift; sourceTree = "<group>"; };
 		4CDC6AA726F27CB500000180 /* ApiClient+HomeApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ApiClient+HomeApi.swift"; sourceTree = "<group>"; };
-		4CDC6AAA26F27FC700000180 /* NavigationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationManager.swift; sourceTree = "<group>"; };
+		4CDDFFA32709C66400156B90 /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
+		4CDDFFA52709C73800156B90 /* iOSUIKitViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSUIKitViewControllerFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,21 +72,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4CA335F926D2A7DA00EBE252 /* ApiClient */ = {
+		4C43DA7C270A18B7002A8A03 /* NavigationControllerRouterExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				4C43DA7F270A273A002A8A03 /* NavigationControllerRouter+HomeNavigation.swift */,
+			);
+			path = NavigationControllerRouterExtensions;
+			sourceTree = "<group>";
+		};
+		4CA335F926D2A7DA00EBE252 /* ApiClientExtensions */ = {
 			isa = PBXGroup;
 			children = (
 				4CDC6AA726F27CB500000180 /* ApiClient+HomeApi.swift */,
 			);
-			path = ApiClient;
+			path = ApiClientExtensions;
 			sourceTree = "<group>";
 		};
-		4CA335FB26D2A7F700EBE252 /* App */ = {
+		4CA335FB26D2A7F700EBE252 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				4CDC6AA926F27FBC00000180 /* Navigation */,
 				4CC1064626CF9130001432B7 /* AppDelegate.swift */,
+				4C43DA7C270A18B7002A8A03 /* NavigationControllerRouterExtensions */,
+				4CA335F926D2A7DA00EBE252 /* ApiClientExtensions */,
 			);
-			path = App;
+			path = Main;
 			sourceTree = "<group>";
 		};
 		4CA335FC26D2A89F00EBE252 /* Supporting Files */ = {
@@ -121,9 +136,9 @@
 		4CC1064526CF9130001432B7 /* WeatherApp */ = {
 			isa = PBXGroup;
 			children = (
-				4CA335FB26D2A7F700EBE252 /* App */,
+				4CDDFF9E2709B7F100156B90 /* Routing */,
+				4CA335FB26D2A7F700EBE252 /* Main */,
 				4CC1068F26CFA90D001432B7 /* Network Environments */,
-				4CA335F926D2A7DA00EBE252 /* ApiClient */,
 				4CA335FC26D2A89F00EBE252 /* Supporting Files */,
 				4CA335FD26D2A8AC00EBE252 /* Resources */,
 				4CC1065426CF9131001432B7 /* Info.plist */,
@@ -157,12 +172,14 @@
 			path = "Network Environments";
 			sourceTree = "<group>";
 		};
-		4CDC6AA926F27FBC00000180 /* Navigation */ = {
+		4CDDFF9E2709B7F100156B90 /* Routing */ = {
 			isa = PBXGroup;
 			children = (
-				4CDC6AAA26F27FC700000180 /* NavigationManager.swift */,
+				4C43DA7A270A184A002A8A03 /* NavigationControllerRouter.swift */,
+				4CDDFFA32709C66400156B90 /* ViewControllerFactory.swift */,
+				4CDDFFA52709C73800156B90 /* iOSUIKitViewControllerFactory.swift */,
 			);
-			path = Navigation;
+			path = Routing;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,8 +291,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C43DA7B270A184A002A8A03 /* NavigationControllerRouter.swift in Sources */,
+				4C43DA80270A273A002A8A03 /* NavigationControllerRouter+HomeNavigation.swift in Sources */,
+				4CDDFFA62709C73800156B90 /* iOSUIKitViewControllerFactory.swift in Sources */,
+				4CDDFFA42709C66400156B90 /* ViewControllerFactory.swift in Sources */,
 				4CC1064726CF9130001432B7 /* AppDelegate.swift in Sources */,
-				4CDC6AAB26F27FC700000180 /* NavigationManager.swift in Sources */,
 				4CC1069426CFA9D9001432B7 /* WeatherForecastEnvironment.swift in Sources */,
 				4CDC6AA826F27CB500000180 /* ApiClient+HomeApi.swift in Sources */,
 			);
@@ -563,7 +583,7 @@
 			repositoryURL = "https://github.com/ArdOnat/HomeModule.git";
 			requirement = {
 				kind = exactVersion;
-				version = 1.1.2;
+				version = 1.1.5;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
