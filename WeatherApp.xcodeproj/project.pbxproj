@@ -12,6 +12,9 @@
 		4C43DA80270A273A002A8A03 /* NavigationControllerRouter+HomeNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C43DA7F270A273A002A8A03 /* NavigationControllerRouter+HomeNavigation.swift */; };
 		4C8B5E1226EE3E6B0007327C /* ApiClient in Frameworks */ = {isa = PBXBuildFile; productRef = 4C8B5E1126EE3E6B0007327C /* ApiClient */; };
 		4C98947026E94ABF0045E079 /* HomeModule in Frameworks */ = {isa = PBXBuildFile; productRef = 4C98946F26E94ABF0045E079 /* HomeModule */; };
+		4CB0C23F270B814D00E7C1EA /* NavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB0C23E270B814D00E7C1EA /* NavigationRouter.swift */; };
+		4CB0C241270B830B00E7C1EA /* ApiClientHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB0C240270B830B00E7C1EA /* ApiClientHelper.swift */; };
+		4CB0C243270B8A2400E7C1EA /* AppFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB0C242270B8A2400E7C1EA /* AppFlow.swift */; };
 		4CC1064726CF9130001432B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC1064626CF9130001432B7 /* AppDelegate.swift */; };
 		4CC1065026CF9131001432B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CC1064F26CF9131001432B7 /* Assets.xcassets */; };
 		4CC1065326CF9131001432B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CC1065126CF9131001432B7 /* LaunchScreen.storyboard */; };
@@ -35,6 +38,9 @@
 /* Begin PBXFileReference section */
 		4C43DA7A270A184A002A8A03 /* NavigationControllerRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationControllerRouter.swift; sourceTree = "<group>"; };
 		4C43DA7F270A273A002A8A03 /* NavigationControllerRouter+HomeNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationControllerRouter+HomeNavigation.swift"; sourceTree = "<group>"; };
+		4CB0C23E270B814D00E7C1EA /* NavigationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRouter.swift; sourceTree = "<group>"; };
+		4CB0C240270B830B00E7C1EA /* ApiClientHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClientHelper.swift; sourceTree = "<group>"; };
+		4CB0C242270B8A2400E7C1EA /* AppFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlow.swift; sourceTree = "<group>"; };
 		4CC1064326CF9130001432B7 /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CC1064626CF9130001432B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CC1064F26CF9131001432B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -91,7 +97,10 @@
 		4CA335FB26D2A7F700EBE252 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				4CB0C240270B830B00E7C1EA /* ApiClientHelper.swift */,
 				4CC1064626CF9130001432B7 /* AppDelegate.swift */,
+				4CB0C242270B8A2400E7C1EA /* AppFlow.swift */,
+				4CDDFFA52709C73800156B90 /* iOSUIKitViewControllerFactory.swift */,
 				4C43DA7C270A18B7002A8A03 /* NavigationControllerRouterExtensions */,
 				4CA335F926D2A7DA00EBE252 /* ApiClientExtensions */,
 			);
@@ -175,9 +184,9 @@
 		4CDDFF9E2709B7F100156B90 /* Routing */ = {
 			isa = PBXGroup;
 			children = (
+				4CB0C23E270B814D00E7C1EA /* NavigationRouter.swift */,
 				4C43DA7A270A184A002A8A03 /* NavigationControllerRouter.swift */,
 				4CDDFFA32709C66400156B90 /* ViewControllerFactory.swift */,
-				4CDDFFA52709C73800156B90 /* iOSUIKitViewControllerFactory.swift */,
 			);
 			path = Routing;
 			sourceTree = "<group>";
@@ -293,10 +302,13 @@
 			files = (
 				4C43DA7B270A184A002A8A03 /* NavigationControllerRouter.swift in Sources */,
 				4C43DA80270A273A002A8A03 /* NavigationControllerRouter+HomeNavigation.swift in Sources */,
+				4CB0C23F270B814D00E7C1EA /* NavigationRouter.swift in Sources */,
+				4CB0C243270B8A2400E7C1EA /* AppFlow.swift in Sources */,
 				4CDDFFA62709C73800156B90 /* iOSUIKitViewControllerFactory.swift in Sources */,
 				4CDDFFA42709C66400156B90 /* ViewControllerFactory.swift in Sources */,
 				4CC1064726CF9130001432B7 /* AppDelegate.swift in Sources */,
 				4CC1069426CFA9D9001432B7 /* WeatherForecastEnvironment.swift in Sources */,
+				4CB0C241270B830B00E7C1EA /* ApiClientHelper.swift in Sources */,
 				4CDC6AA826F27CB500000180 /* ApiClient+HomeApi.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

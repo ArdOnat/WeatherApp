@@ -7,9 +7,9 @@
 
 import UIKit
 
-final class NavigationControllerRouter {
-    private let navigationController: UINavigationController
-    private let factory: ViewControllerFactory
+final class NavigationControllerRouter: NavigationRouter {
+    let navigationController: UINavigationController
+    let factory: ViewControllerFactory
     
     init(_ navigationController: UINavigationController, factory: ViewControllerFactory) {
         self.navigationController = navigationController
@@ -22,5 +22,11 @@ final class NavigationControllerRouter {
     
     func push(_ viewController: UIViewController) {
         navigationController.pushViewController(viewController, animated: true)
+    }
+}
+
+extension NavigationControllerRouter: AppFlowDelegate {
+    func start() {
+        self.startNavigation()
     }
 }

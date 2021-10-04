@@ -5,14 +5,13 @@
 //  Created by Arda Onat on 20.08.2021.
 //
 import ApiClient
-import CoreModule
 import UIKit
-import HomeModule
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var appFlow: AppFlow?
     
     private lazy var navigationController = UINavigationController()
 
@@ -30,16 +29,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.rootViewController = navigationController
         self.window?.makeKeyAndVisible()
         
-        startApp()
+        startAppFlow()
         
         return true
     }
     
-    private func startApp() {
-        let factory = iOSUIKitViewControllerFactory(apiClient: ApiClient.shared)
+    private func startAppFlow() {
+        let factory = ViewFactory(apiClient: ApiClient.shared)
         let router = NavigationControllerRouter(navigationController, factory: factory)
         factory.navigationDelegate = router
         
-        router.startNavigation()
+        appFlow = AppFlow(delegate: router)
+        appFlow?.start()
     }
 }

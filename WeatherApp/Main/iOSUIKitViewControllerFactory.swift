@@ -11,23 +11,22 @@ import UIKit
 import HomeModule
 
 // Composition Root
-final class iOSUIKitViewControllerFactory: ViewControllerFactory {
-    
-    typealias ApiClientHelper = HomeApi
-    typealias NavigationHelper = (HomeNavigation & AnyObject)
-    
+final class ViewFactory: ViewControllerFactory {
+
     private let apiClient: ApiClientHelper
-    weak var navigationDelegate: NavigationHelper!
+    weak var navigationDelegate: NavigationRouter?
     
     init(apiClient: ApiClientHelper) {
         self.apiClient = apiClient
     }
     
     func homePageViewController() -> UIViewController {
-        return homePage()
+        guard let homePage = homePage() else { return UIViewController() }
+        return homePage
     }
     
-    private func homePage() -> HomeViewController {
+    private func homePage() -> HomeViewController? {
+        guard let navigationDelegate = navigationDelegate as? HomeNavigation else { return nil }
         return HomePageModuleBuilder.generate(homeApi: apiClient, homeNavigation: navigationDelegate)
     }
 }
