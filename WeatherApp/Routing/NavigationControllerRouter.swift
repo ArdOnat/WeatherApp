@@ -24,9 +24,3 @@ final class NavigationControllerRouter: NavigationRouter {
         navigationController.pushViewController(viewController, animated: true)
     }
 }
-
-extension NavigationControllerRouter: AppFlowDelegate {
-    func start() {
-        self.startNavigation()
-    }
-}

@@ -12,7 +12,7 @@ enum WeatherForecastNetworkEnvironment: NetworkEnvironment {
     
     var baseURL: String {
         switch self {
-        case .prod: return "https://api.openweathermap.org/data/2.5/"
+            case .prod: return "https://api.openweathermap.org/data/2.5/"
         }
     }
 }

@@ -6,4 +6,4 @@
 //
 import HomeModule
 
-typealias ApiClientHelper = HomeApi
+typealias ApiClientType = HomeApi

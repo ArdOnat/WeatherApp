@@ -9,6 +9,6 @@ import HomeModule
 
 extension NavigationControllerRouter: HomeNavigation {
     func routeToDetail() {
-
+        self.push(factory.homePageViewController())
     }
 }

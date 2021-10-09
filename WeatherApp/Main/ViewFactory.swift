@@ -13,10 +13,10 @@ import HomeModule
 // Composition Root
 final class ViewFactory: ViewControllerFactory {
 
-    private let apiClient: ApiClientHelper
+    private let apiClient: ApiClientType
     weak var navigationDelegate: NavigationRouter?
     
-    init(apiClient: ApiClientHelper) {
+    init(apiClient: ApiClientType) {
         self.apiClient = apiClient
     }
     
