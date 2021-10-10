@@ -8,15 +8,15 @@
 import UIKit
 
 // Import UI Modules
+import CoreModule
 import HomeModule
 
-// Composition Root
 final class ViewFactory: ViewControllerFactory {
 
-    private let apiClient: ApiClientType
+    private let apiClient: ApiClient
     weak var navigationDelegate: NavigationRouter?
     
-    init(apiClient: ApiClientType) {
+    init(apiClient: ApiClient) {
         self.apiClient = apiClient
     }
     
@@ -26,7 +26,7 @@ final class ViewFactory: ViewControllerFactory {
     }
     
     private func homePage() -> HomeViewController? {
-        guard let navigationDelegate = navigationDelegate as? HomeNavigation else { return nil }
-        return HomePageModuleBuilder.generate(homeApi: apiClient, homeNavigation: navigationDelegate)
+        guard let homeApi = apiClient as? HomeApi, let navigationDelegate = navigationDelegate as? HomeNavigation else { return nil }
+        return HomePageModuleBuilder.generate(homeApi: homeApi, homeNavigation: navigationDelegate)
     }
 }

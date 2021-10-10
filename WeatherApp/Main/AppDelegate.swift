@@ -7,6 +7,7 @@
 import ApiClient
 import UIKit
 
+// Composition Root
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
