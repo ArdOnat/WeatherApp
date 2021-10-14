@@ -27,6 +27,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		4C276839271895DC0053C944 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4CC1063B26CF9130001432B7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4CC1064226CF9130001432B7;
+			remoteInfo = WeatherApp;
+		};
 		4CC1065A26CF9132001432B7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4CC1063B26CF9130001432B7 /* Project object */;
@@ -61,6 +68,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4C276830271895DC0053C944 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4CC1064026CF9130001432B7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -80,6 +94,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C276834271895DC0053C944 /* WeatherAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4CC1066A26CF9132001432B7 /* Info.plist */,
+				4C276837271895DC0053C944 /* WeatherAppUITestsLaunchTests.swift */,
+			);
+			path = WeatherAppUITests;
+			sourceTree = "<group>";
+		};
 		4C43DA7C270A18B7002A8A03 /* NavigationControllerRouterExtensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -268,9 +291,13 @@
 		4CC1063B26CF9130001432B7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1250;
+				LastSwiftUpdateCheck = 1300;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
+					4C276832271895DC0053C944 = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = 4CC1064226CF9130001432B7;
+					};
 					4CC1064226CF9130001432B7 = {
 						CreatedOnToolsVersion = 12.5.1;
 					};
@@ -305,6 +332,13 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4C276831271895DC0053C944 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4CC1064126CF9130001432B7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -361,6 +395,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		4C27683A271895DC0053C944 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4CC1064226CF9130001432B7 /* WeatherApp */;
+			targetProxy = 4C276839271895DC0053C944 /* PBXContainerItemProxy */;
+		};
 		4CC1065B26CF9132001432B7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 4CC1064226CF9130001432B7 /* WeatherApp */;
@@ -380,6 +419,54 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		4C27683C271895DC0053C944 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U9AB5H938F;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ardonat.WeatherAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WeatherApp;
+			};
+			name = Debug;
+		};
+		4C27683D271895DC0053C944 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U9AB5H938F;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ardonat.WeatherAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WeatherApp;
+			};
+			name = Release;
+		};
 		4CC1066B26CF9132001432B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -625,7 +712,7 @@
 			repositoryURL = "https://github.com/ArdOnat/ApiClient.git";
 			requirement = {
 				kind = exactVersion;
-				version = 1.2.0;
+				version = 1.2.1;
 			};
 		};
 		4CC6F43E27131C9D00309960 /* XCRemoteSwiftPackageReference "HomeModule" */ = {
@@ -633,7 +720,7 @@
 			repositoryURL = "https://github.com/ArdOnat/HomeModule.git";
 			requirement = {
 				kind = exactVersion;
-				version = 1.2.0;
+				version = 1.2.2;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

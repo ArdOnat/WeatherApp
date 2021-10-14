@@ -10,14 +10,15 @@ import UIKit
 // Import UI Modules
 import CoreModule
 import HomeModule
+import ApiClient
 
 final class ViewFactory: ViewControllerFactory {
 
-    private let apiClient: ApiClient
+    private let networkClient: NetworkClient
     weak var navigationDelegate: NavigationRouter?
     
-    init(apiClient: ApiClient) {
-        self.apiClient = apiClient
+    init(networkClient: NetworkClient) {
+        self.networkClient = networkClient
     }
     
     func homePageViewController() -> UIViewController {
@@ -26,7 +27,7 @@ final class ViewFactory: ViewControllerFactory {
     }
     
     private func homePage() -> HomeViewController? {
-        guard let homeApi = apiClient as? HomeApi, let navigationDelegate = navigationDelegate as? HomeNavigation else { return nil }
+        guard let homeApi = networkClient as? HomeApi, let navigationDelegate = navigationDelegate as? HomeNavigation else { return nil }
         return HomePageModuleBuilder.generate(homeApi: homeApi, homeNavigation: navigationDelegate)
     }
 }
