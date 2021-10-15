@@ -10,7 +10,6 @@ import UIKit
 // Import UI Modules
 import CoreModule
 import HomeModule
-import ApiClient
 
 final class ViewFactory: ViewControllerFactory {
 
