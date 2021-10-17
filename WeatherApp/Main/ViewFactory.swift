@@ -6,9 +6,9 @@
 //
 
 import UIKit
+import CoreModule
 
 // Import UI Modules
-import CoreModule
 import HomeModule
 
 final class ViewFactory: ViewControllerFactory {

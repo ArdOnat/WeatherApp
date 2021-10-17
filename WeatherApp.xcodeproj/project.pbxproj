@@ -134,7 +134,6 @@
 				4CC1064626CF9130001432B7 /* AppDelegate.swift */,
 				4CDDFFA52709C73800156B90 /* ViewFactory.swift */,
 				4CC1068F26CFA90D001432B7 /* Network Environments */,
-				4C43DA7C270A18B7002A8A03 /* NavigationControllerRouterExtensions */,
 				4CA335F926D2A7DA00EBE252 /* ApiClientExtensions */,
 			);
 			path = Main;
@@ -212,6 +211,7 @@
 				4CB0C23E270B814D00E7C1EA /* NavigationRouter.swift */,
 				4C43DA7A270A184A002A8A03 /* NavigationControllerRouter.swift */,
 				4CDDFFA32709C66400156B90 /* ViewControllerFactory.swift */,
+				4C43DA7C270A18B7002A8A03 /* NavigationControllerRouterExtensions */,
 			);
 			path = Routing;
 			sourceTree = "<group>";
