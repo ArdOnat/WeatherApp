@@ -39,29 +39,17 @@ class WeatherAppUITestsLaunchTests: XCTestCase {
     
     func testLocationLabelExists() {
         let locationLabel = super.getApp(with: "com.ardonat.WeatherApp.WeatherApp").staticTexts["locationLabel"]
-        let exists = NSPredicate(format: "exists == true")
-        expectation(for: exists, evaluatedWith: locationLabel, handler: nil)
-        
-        waitForExpectations(timeout: 20, handler: nil)
-        XCTAssert(locationLabel.exists)
+        XCTAssert(locationLabel.waitForExistence(timeout:10))
     }
     
     func testWeatherStatusExists() {
         let weatherStatusLabel = super.getApp(with: "com.ardonat.WeatherApp.WeatherApp").staticTexts["weatherStatusLabel"]
-        let exists = NSPredicate(format: "exists == true")
-        expectation(for: exists, evaluatedWith: weatherStatusLabel, handler: nil)
-        
-        waitForExpectations(timeout: 20, handler: nil)
-        XCTAssert(weatherStatusLabel.exists)
+        XCTAssert(weatherStatusLabel.waitForExistence(timeout:10))
     }
     
     func testTemperatureLabelExists() {
         let temperatureLabel = super.getApp(with: "com.ardonat.WeatherApp.WeatherApp").staticTexts["temperatureLabel"]
-        let exists = NSPredicate(format: "exists == true")
-        expectation(for: exists, evaluatedWith: temperatureLabel, handler: nil)
-        
-        waitForExpectations(timeout: 20, handler: nil)
-        XCTAssert(temperatureLabel.exists)
+        XCTAssertTrue(temperatureLabel.waitForExistence(timeout:10))
     }
 }
 
