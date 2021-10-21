@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		4C276838271895DC0053C944 /* WeatherAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C276837271895DC0053C944 /* WeatherAppUITestsLaunchTests.swift */; };
 		4C43DA7B270A184A002A8A03 /* NavigationControllerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C43DA7A270A184A002A8A03 /* NavigationControllerRouter.swift */; };
-		4C43DA80270A273A002A8A03 /* NavigationControllerRouter+HomeNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C43DA7F270A273A002A8A03 /* NavigationControllerRouter+HomeNavigation.swift */; };
+		4C43DA80270A273A002A8A03 /* NavigationControllerRouter+HomeModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C43DA7F270A273A002A8A03 /* NavigationControllerRouter+HomeModule.swift */; };
 		4CB0C23F270B814D00E7C1EA /* NavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB0C23E270B814D00E7C1EA /* NavigationRouter.swift */; };
 		4CB0C243270B8A2400E7C1EA /* AppFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB0C242270B8A2400E7C1EA /* AppFlow.swift */; };
 		4CC1064726CF9130001432B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC1064626CF9130001432B7 /* AppDelegate.swift */; };
@@ -24,6 +24,7 @@
 		4CDDFFA62709C73800156B90 /* ViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDDFFA52709C73800156B90 /* ViewFactory.swift */; };
 		4CEFA86F270E31140052C647 /* AppFlowDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEFA86E270E31140052C647 /* AppFlowDelegate.swift */; };
 		4CEFA871270E31CA0052C647 /* NavigationControllerRouter+AppFlowDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEFA870270E31CA0052C647 /* NavigationControllerRouter+AppFlowDelegate.swift */; };
+		4CF869C027219EF700AE3B44 /* UIViewController+ToastMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF869BF27219EF700AE3B44 /* UIViewController+ToastMessageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +48,7 @@
 		4C276833271895DC0053C944 /* WeatherAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C276837271895DC0053C944 /* WeatherAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		4C43DA7A270A184A002A8A03 /* NavigationControllerRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationControllerRouter.swift; sourceTree = "<group>"; };
-		4C43DA7F270A273A002A8A03 /* NavigationControllerRouter+HomeNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationControllerRouter+HomeNavigation.swift"; sourceTree = "<group>"; };
+		4C43DA7F270A273A002A8A03 /* NavigationControllerRouter+HomeModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationControllerRouter+HomeModule.swift"; sourceTree = "<group>"; };
 		4CB0C23E270B814D00E7C1EA /* NavigationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRouter.swift; sourceTree = "<group>"; };
 		4CB0C242270B8A2400E7C1EA /* AppFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlow.swift; sourceTree = "<group>"; };
 		4CC1064326CF9130001432B7 /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,6 +66,7 @@
 		4CDDFFA52709C73800156B90 /* ViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewFactory.swift; sourceTree = "<group>"; };
 		4CEFA86E270E31140052C647 /* AppFlowDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowDelegate.swift; sourceTree = "<group>"; };
 		4CEFA870270E31CA0052C647 /* NavigationControllerRouter+AppFlowDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationControllerRouter+AppFlowDelegate.swift"; sourceTree = "<group>"; };
+		4CF869BF27219EF700AE3B44 /* UIViewController+ToastMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ToastMessageView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,13 +105,13 @@
 			path = WeatherAppUITests;
 			sourceTree = "<group>";
 		};
-		4C43DA7C270A18B7002A8A03 /* NavigationControllerRouterExtensions */ = {
+		4C43DA7C270A18B7002A8A03 /* NavigationControllerRouter Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				4C43DA7F270A273A002A8A03 /* NavigationControllerRouter+HomeNavigation.swift */,
+				4C43DA7F270A273A002A8A03 /* NavigationControllerRouter+HomeModule.swift */,
 				4CEFA870270E31CA0052C647 /* NavigationControllerRouter+AppFlowDelegate.swift */,
 			);
-			path = NavigationControllerRouterExtensions;
+			path = "NavigationControllerRouter Extensions";
 			sourceTree = "<group>";
 		};
 		4C679E502711990F0004CC22 /* AppFlow */ = {
@@ -120,12 +122,12 @@
 			path = AppFlow;
 			sourceTree = "<group>";
 		};
-		4CA335F926D2A7DA00EBE252 /* ApiClientExtensions */ = {
+		4CA335F926D2A7DA00EBE252 /* ApiClient Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				4CDC6AA726F27CB500000180 /* ApiClient+HomeApi.swift */,
 			);
-			path = ApiClientExtensions;
+			path = "ApiClient Extensions";
 			sourceTree = "<group>";
 		};
 		4CA335FB26D2A7F700EBE252 /* Main */ = {
@@ -133,8 +135,9 @@
 			children = (
 				4CC1064626CF9130001432B7 /* AppDelegate.swift */,
 				4CDDFFA52709C73800156B90 /* ViewFactory.swift */,
+				4CF869BE27219EC500AE3B44 /* UIViewController Extensions */,
 				4CC1068F26CFA90D001432B7 /* Network Environments */,
-				4CA335F926D2A7DA00EBE252 /* ApiClientExtensions */,
+				4CA335F926D2A7DA00EBE252 /* ApiClient Extensions */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -211,7 +214,7 @@
 				4CB0C23E270B814D00E7C1EA /* NavigationRouter.swift */,
 				4C43DA7A270A184A002A8A03 /* NavigationControllerRouter.swift */,
 				4CDDFFA32709C66400156B90 /* ViewControllerFactory.swift */,
-				4C43DA7C270A18B7002A8A03 /* NavigationControllerRouterExtensions */,
+				4C43DA7C270A18B7002A8A03 /* NavigationControllerRouter Extensions */,
 			);
 			path = Routing;
 			sourceTree = "<group>";
@@ -223,6 +226,14 @@
 				4CB0C242270B8A2400E7C1EA /* AppFlow.swift */,
 			);
 			path = AppFlow;
+			sourceTree = "<group>";
+		};
+		4CF869BE27219EC500AE3B44 /* UIViewController Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4CF869BF27219EF700AE3B44 /* UIViewController+ToastMessageView.swift */,
+			);
+			path = "UIViewController Extensions";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -371,7 +382,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C43DA7B270A184A002A8A03 /* NavigationControllerRouter.swift in Sources */,
-				4C43DA80270A273A002A8A03 /* NavigationControllerRouter+HomeNavigation.swift in Sources */,
+				4C43DA80270A273A002A8A03 /* NavigationControllerRouter+HomeModule.swift in Sources */,
 				4CB0C23F270B814D00E7C1EA /* NavigationRouter.swift in Sources */,
 				4CB0C243270B8A2400E7C1EA /* AppFlow.swift in Sources */,
 				4CDDFFA62709C73800156B90 /* ViewFactory.swift in Sources */,
@@ -379,6 +390,7 @@
 				4CC1064726CF9130001432B7 /* AppDelegate.swift in Sources */,
 				4CC1069426CFA9D9001432B7 /* WeatherForecastEnvironment.swift in Sources */,
 				4CDC6AA826F27CB500000180 /* ApiClient+HomeApi.swift in Sources */,
+				4CF869C027219EF700AE3B44 /* UIViewController+ToastMessageView.swift in Sources */,
 				4CEFA86F270E31140052C647 /* AppFlowDelegate.swift in Sources */,
 				4CEFA871270E31CA0052C647 /* NavigationControllerRouter+AppFlowDelegate.swift in Sources */,
 			);
@@ -720,7 +732,7 @@
 			repositoryURL = "https://github.com/ArdOnat/HomeModule.git";
 			requirement = {
 				kind = exactVersion;
-				version = 1.2.2;
+				version = 1.2.3;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
