@@ -12,3 +12,9 @@ extension NavigationControllerRouter: HomeNavigation {
         self.push(factory.homePageViewController())
     }
 }
+
+extension NavigationControllerRouter: HomeViewOperationHandler {
+    func showToast(with errorMessage: String) {
+        self.showToastMessageView(with: errorMessage)
+    }
+}

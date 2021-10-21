@@ -13,4 +13,5 @@ protocol NavigationRouter: AnyObject {
     
     func startNavigation()
     func push(_ viewController: UIViewController)
+    func showToastMessageView(with message: String)
 }

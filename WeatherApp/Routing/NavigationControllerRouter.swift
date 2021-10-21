@@ -23,4 +23,8 @@ final class NavigationControllerRouter: NavigationRouter {
     func push(_ viewController: UIViewController) {
         navigationController.pushViewController(viewController, animated: true)
     }
+    
+    func showToastMessageView(with message: String) {
+        navigationController.topViewController?.showToastMessageView(with: message, font: .systemFont(ofSize: 14))
+    }
 }
