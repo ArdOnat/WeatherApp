@@ -6,8 +6,8 @@
         "repositoryURL": "https://github.com/Alamofire/Alamofire.git",
         "state": {
           "branch": null,
-          "revision": "f96b619bcb2383b43d898402283924b80e2c4bae",
-          "version": "5.4.3"
+          "revision": "d120af1e8638c7da36c8481fd61a66c0c08dc4fc",
+          "version": "5.4.4"
         }
       },
       {
@@ -15,8 +15,8 @@
         "repositoryURL": "https://github.com/ArdOnat/ApiClient.git",
         "state": {
           "branch": null,
-          "revision": "dd04a4ffb84f41ee0ccbf059b0ac01fc153c9677",
-          "version": "1.2.1"
+          "revision": "f85c342b10f3cc938f691cd7bc1711acf3e8ca09",
+          "version": "1.2.2"
         }
       },
       {
@@ -33,8 +33,8 @@
         "repositoryURL": "https://github.com/ArdOnat/HomeModule.git",
         "state": {
           "branch": null,
-          "revision": "af72aebf36c6437cb669bd03c9f75af7e6eeb9fc",
-          "version": "1.2.6"
+          "revision": "7762c240a5db098574eb5c0ce3fb882e3803759d",
+          "version": "1.2.8"
         }
       }
     ]

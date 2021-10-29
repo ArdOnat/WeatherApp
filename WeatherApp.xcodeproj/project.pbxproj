@@ -7,23 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C24231E272C62E200C50ECC /* ApiClient in Frameworks */ = {isa = PBXBuildFile; productRef = 4C24231D272C62E200C50ECC /* ApiClient */; };
+		4C242321272C633800C50ECC /* HomeModule in Frameworks */ = {isa = PBXBuildFile; productRef = 4C242320272C633800C50ECC /* HomeModule */; };
 		4C276838271895DC0053C944 /* WeatherAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C276837271895DC0053C944 /* WeatherAppUITestsLaunchTests.swift */; };
 		4C43DA7B270A184A002A8A03 /* NavigationControllerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C43DA7A270A184A002A8A03 /* NavigationControllerRouter.swift */; };
 		4C43DA80270A273A002A8A03 /* NavigationControllerRouter+HomeModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C43DA7F270A273A002A8A03 /* NavigationControllerRouter+HomeModule.swift */; };
 		4CB0C23F270B814D00E7C1EA /* NavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB0C23E270B814D00E7C1EA /* NavigationRouter.swift */; };
-		4CB0C243270B8A2400E7C1EA /* AppFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB0C242270B8A2400E7C1EA /* AppFlow.swift */; };
 		4CC1064726CF9130001432B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC1064626CF9130001432B7 /* AppDelegate.swift */; };
 		4CC1065026CF9131001432B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CC1064F26CF9131001432B7 /* Assets.xcassets */; };
 		4CC1065326CF9131001432B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CC1065126CF9131001432B7 /* LaunchScreen.storyboard */; };
 		4CC1065E26CF9132001432B7 /* AppFlowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC1065D26CF9132001432B7 /* AppFlowTests.swift */; };
 		4CC1069426CFA9D9001432B7 /* WeatherForecastEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC1069326CFA9D9001432B7 /* WeatherForecastEnvironment.swift */; };
-		4CC6F43D27131BE400309960 /* ApiClient in Frameworks */ = {isa = PBXBuildFile; productRef = 4CC6F43C27131BE400309960 /* ApiClient */; };
-		4CC6F44027131C9D00309960 /* HomeModule in Frameworks */ = {isa = PBXBuildFile; productRef = 4CC6F43F27131C9D00309960 /* HomeModule */; };
 		4CDC6AA826F27CB500000180 /* ApiClient+HomeApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDC6AA726F27CB500000180 /* ApiClient+HomeApi.swift */; };
 		4CDDFFA42709C66400156B90 /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDDFFA32709C66400156B90 /* ViewControllerFactory.swift */; };
 		4CDDFFA62709C73800156B90 /* ViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDDFFA52709C73800156B90 /* ViewFactory.swift */; };
-		4CEFA86F270E31140052C647 /* AppFlowDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEFA86E270E31140052C647 /* AppFlowDelegate.swift */; };
-		4CEFA871270E31CA0052C647 /* NavigationControllerRouter+AppFlowDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEFA870270E31CA0052C647 /* NavigationControllerRouter+AppFlowDelegate.swift */; };
 		4CF869C027219EF700AE3B44 /* UIViewController+ToastMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF869BF27219EF700AE3B44 /* UIViewController+ToastMessageView.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,7 +47,6 @@
 		4C43DA7A270A184A002A8A03 /* NavigationControllerRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationControllerRouter.swift; sourceTree = "<group>"; };
 		4C43DA7F270A273A002A8A03 /* NavigationControllerRouter+HomeModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationControllerRouter+HomeModule.swift"; sourceTree = "<group>"; };
 		4CB0C23E270B814D00E7C1EA /* NavigationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRouter.swift; sourceTree = "<group>"; };
-		4CB0C242270B8A2400E7C1EA /* AppFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlow.swift; sourceTree = "<group>"; };
 		4CC1064326CF9130001432B7 /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CC1064626CF9130001432B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CC1064F26CF9131001432B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -64,8 +60,6 @@
 		4CDC6AA726F27CB500000180 /* ApiClient+HomeApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ApiClient+HomeApi.swift"; sourceTree = "<group>"; };
 		4CDDFFA32709C66400156B90 /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
 		4CDDFFA52709C73800156B90 /* ViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewFactory.swift; sourceTree = "<group>"; };
-		4CEFA86E270E31140052C647 /* AppFlowDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowDelegate.swift; sourceTree = "<group>"; };
-		4CEFA870270E31CA0052C647 /* NavigationControllerRouter+AppFlowDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationControllerRouter+AppFlowDelegate.swift"; sourceTree = "<group>"; };
 		4CF869BF27219EF700AE3B44 /* UIViewController+ToastMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ToastMessageView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -81,8 +75,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4CC6F43D27131BE400309960 /* ApiClient in Frameworks */,
-				4CC6F44027131C9D00309960 /* HomeModule in Frameworks */,
+				4C24231E272C62E200C50ECC /* ApiClient in Frameworks */,
+				4C242321272C633800C50ECC /* HomeModule in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,7 +103,6 @@
 			isa = PBXGroup;
 			children = (
 				4C43DA7F270A273A002A8A03 /* NavigationControllerRouter+HomeModule.swift */,
-				4CEFA870270E31CA0052C647 /* NavigationControllerRouter+AppFlowDelegate.swift */,
 			);
 			path = "NavigationControllerRouter Extensions";
 			sourceTree = "<group>";
@@ -222,8 +215,6 @@
 		4CEFA872270E330B0052C647 /* AppFlow */ = {
 			isa = PBXGroup;
 			children = (
-				4CEFA86E270E31140052C647 /* AppFlowDelegate.swift */,
-				4CB0C242270B8A2400E7C1EA /* AppFlow.swift */,
 			);
 			path = AppFlow;
 			sourceTree = "<group>";
@@ -271,8 +262,8 @@
 			);
 			name = WeatherApp;
 			packageProductDependencies = (
-				4CC6F43C27131BE400309960 /* ApiClient */,
-				4CC6F43F27131C9D00309960 /* HomeModule */,
+				4C24231D272C62E200C50ECC /* ApiClient */,
+				4C242320272C633800C50ECC /* HomeModule */,
 			);
 			productName = WeatherApp;
 			productReference = 4CC1064326CF9130001432B7 /* WeatherApp.app */;
@@ -328,8 +319,8 @@
 			);
 			mainGroup = 4CC1063A26CF9130001432B7;
 			packageReferences = (
-				4CC6F43B27131BE400309960 /* XCRemoteSwiftPackageReference "ApiClient" */,
-				4CC6F43E27131C9D00309960 /* XCRemoteSwiftPackageReference "HomeModule" */,
+				4C24231C272C62E200C50ECC /* XCRemoteSwiftPackageReference "ApiClient" */,
+				4C24231F272C633800C50ECC /* XCRemoteSwiftPackageReference "HomeModule" */,
 			);
 			productRefGroup = 4CC1064426CF9130001432B7 /* Products */;
 			projectDirPath = "";
@@ -384,15 +375,12 @@
 				4C43DA7B270A184A002A8A03 /* NavigationControllerRouter.swift in Sources */,
 				4C43DA80270A273A002A8A03 /* NavigationControllerRouter+HomeModule.swift in Sources */,
 				4CB0C23F270B814D00E7C1EA /* NavigationRouter.swift in Sources */,
-				4CB0C243270B8A2400E7C1EA /* AppFlow.swift in Sources */,
 				4CDDFFA62709C73800156B90 /* ViewFactory.swift in Sources */,
 				4CDDFFA42709C66400156B90 /* ViewControllerFactory.swift in Sources */,
 				4CC1064726CF9130001432B7 /* AppDelegate.swift in Sources */,
 				4CC1069426CFA9D9001432B7 /* WeatherForecastEnvironment.swift in Sources */,
 				4CDC6AA826F27CB500000180 /* ApiClient+HomeApi.swift in Sources */,
 				4CF869C027219EF700AE3B44 /* UIViewController+ToastMessageView.swift in Sources */,
-				4CEFA86F270E31140052C647 /* AppFlowDelegate.swift in Sources */,
-				4CEFA871270E31CA0052C647 /* NavigationControllerRouter+AppFlowDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -719,33 +707,33 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		4CC6F43B27131BE400309960 /* XCRemoteSwiftPackageReference "ApiClient" */ = {
+		4C24231C272C62E200C50ECC /* XCRemoteSwiftPackageReference "ApiClient" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ArdOnat/ApiClient.git";
 			requirement = {
 				kind = exactVersion;
-				version = 1.2.1;
+				version = 1.2.2;
 			};
 		};
-		4CC6F43E27131C9D00309960 /* XCRemoteSwiftPackageReference "HomeModule" */ = {
+		4C24231F272C633800C50ECC /* XCRemoteSwiftPackageReference "HomeModule" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ArdOnat/HomeModule.git";
 			requirement = {
 				kind = exactVersion;
-				version = 1.2.6;
+				version = 1.2.8;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		4CC6F43C27131BE400309960 /* ApiClient */ = {
+		4C24231D272C62E200C50ECC /* ApiClient */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 4CC6F43B27131BE400309960 /* XCRemoteSwiftPackageReference "ApiClient" */;
+			package = 4C24231C272C62E200C50ECC /* XCRemoteSwiftPackageReference "ApiClient" */;
 			productName = ApiClient;
 		};
-		4CC6F43F27131C9D00309960 /* HomeModule */ = {
+		4C242320272C633800C50ECC /* HomeModule */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 4CC6F43E27131C9D00309960 /* XCRemoteSwiftPackageReference "HomeModule" */;
+			package = 4C24231F272C633800C50ECC /* XCRemoteSwiftPackageReference "HomeModule" */;
 			productName = HomeModule;
 		};
 /* End XCSwiftPackageProductDependency section */

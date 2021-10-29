@@ -27,6 +27,6 @@ final class ViewFactory: ViewControllerFactory {
     
     private func homePage() -> HomeViewController? {
         guard let homeApi = networkClient as? HomeApi, let navigationDelegate = navigationDelegate as? HomeNavigation, let viewOperationHandler = navigationDelegate as? HomeViewOperationHandler else { return nil }
-        return HomePageModuleBuilder.generate(homeApi: homeApi, homeNavigation: navigationDelegate, viewOperationHandler: viewOperationHandler)
+        return HomePageModuleBuilder.generate(homeApi: homeApi, homeNavigationHandler: navigationDelegate, viewOperationHandler: viewOperationHandler)
     }
 }
