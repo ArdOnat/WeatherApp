@@ -2,21 +2,12 @@
   "object": {
     "pins": [
       {
-        "package": "Alamofire",
-        "repositoryURL": "https://github.com/Alamofire/Alamofire.git",
-        "state": {
-          "branch": null,
-          "revision": "d120af1e8638c7da36c8481fd61a66c0c08dc4fc",
-          "version": "5.4.4"
-        }
-      },
-      {
         "package": "ApiClient",
         "repositoryURL": "https://github.com/ArdOnat/ApiClient.git",
         "state": {
-          "branch": null,
-          "revision": "f85c342b10f3cc938f691cd7bc1711acf3e8ca09",
-          "version": "1.2.2"
+          "branch": "feature/URLSession",
+          "revision": "2bc3effe4a673db1a9992a1f817db819a592aec9",
+          "version": null
         }
       },
       {

@@ -691,8 +691,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ArdOnat/ApiClient.git";
 			requirement = {
-				kind = exactVersion;
-				version = 1.2.2;
+				branch = feature/URLSession;
+				kind = branch;
 			};
 		};
 		4C24231F272C633800C50ECC /* XCRemoteSwiftPackageReference "HomeModule" */ = {
