@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class NavigationManager: NavigationRouter {
+final class NavigationManager {
     let navigationController: UINavigationController
     let factory: ViewControllerFactory
     

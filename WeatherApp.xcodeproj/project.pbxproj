@@ -11,8 +11,7 @@
 		4C242321272C633800C50ECC /* HomeModule in Frameworks */ = {isa = PBXBuildFile; productRef = 4C242320272C633800C50ECC /* HomeModule */; };
 		4C276838271895DC0053C944 /* WeatherAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C276837271895DC0053C944 /* WeatherAppUITestsLaunchTests.swift */; };
 		4C43DA7B270A184A002A8A03 /* NavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C43DA7A270A184A002A8A03 /* NavigationManager.swift */; };
-		4C43DA80270A273A002A8A03 /* NavigationControllerRouter+HomeModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C43DA7F270A273A002A8A03 /* NavigationControllerRouter+HomeModule.swift */; };
-		4CB0C23F270B814D00E7C1EA /* NavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB0C23E270B814D00E7C1EA /* NavigationRouter.swift */; };
+		4C43DA80270A273A002A8A03 /* NavigationManager+HomeModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C43DA7F270A273A002A8A03 /* NavigationManager+HomeModule.swift */; };
 		4CC1064726CF9130001432B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC1064626CF9130001432B7 /* AppDelegate.swift */; };
 		4CC1065026CF9131001432B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CC1064F26CF9131001432B7 /* Assets.xcassets */; };
 		4CC1065326CF9131001432B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CC1065126CF9131001432B7 /* LaunchScreen.storyboard */; };
@@ -45,8 +44,7 @@
 		4C276833271895DC0053C944 /* WeatherAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C276837271895DC0053C944 /* WeatherAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		4C43DA7A270A184A002A8A03 /* NavigationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationManager.swift; sourceTree = "<group>"; };
-		4C43DA7F270A273A002A8A03 /* NavigationControllerRouter+HomeModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationControllerRouter+HomeModule.swift"; sourceTree = "<group>"; };
-		4CB0C23E270B814D00E7C1EA /* NavigationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRouter.swift; sourceTree = "<group>"; };
+		4C43DA7F270A273A002A8A03 /* NavigationManager+HomeModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationManager+HomeModule.swift"; sourceTree = "<group>"; };
 		4CC1064326CF9130001432B7 /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CC1064626CF9130001432B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CC1064F26CF9131001432B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -99,12 +97,12 @@
 			path = WeatherAppUITests;
 			sourceTree = "<group>";
 		};
-		4C43DA7C270A18B7002A8A03 /* NavigationControllerRouter Extensions */ = {
+		4C43DA7C270A18B7002A8A03 /* NavigationManager Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				4C43DA7F270A273A002A8A03 /* NavigationControllerRouter+HomeModule.swift */,
+				4C43DA7F270A273A002A8A03 /* NavigationManager+HomeModule.swift */,
 			);
-			path = "NavigationControllerRouter Extensions";
+			path = "NavigationManager Extensions";
 			sourceTree = "<group>";
 		};
 		4CA335F926D2A7DA00EBE252 /* ApiClient Extensions */ = {
@@ -120,9 +118,10 @@
 			children = (
 				4CC1064626CF9130001432B7 /* AppDelegate.swift */,
 				4CDDFFA52709C73800156B90 /* ViewFactory.swift */,
+				4CA335F926D2A7DA00EBE252 /* ApiClient Extensions */,
 				4CF869BE27219EC500AE3B44 /* UIViewController Extensions */,
 				4CC1068F26CFA90D001432B7 /* Network Environments */,
-				4CA335F926D2A7DA00EBE252 /* ApiClient Extensions */,
+				4C43DA7C270A18B7002A8A03 /* NavigationManager Extensions */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -196,9 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				4C43DA7A270A184A002A8A03 /* NavigationManager.swift */,
-				4CB0C23E270B814D00E7C1EA /* NavigationRouter.swift */,
 				4CDDFFA32709C66400156B90 /* ViewControllerFactory.swift */,
-				4C43DA7C270A18B7002A8A03 /* NavigationControllerRouter Extensions */,
 			);
 			path = Routing;
 			sourceTree = "<group>";
@@ -357,8 +354,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C43DA7B270A184A002A8A03 /* NavigationManager.swift in Sources */,
-				4C43DA80270A273A002A8A03 /* NavigationControllerRouter+HomeModule.swift in Sources */,
-				4CB0C23F270B814D00E7C1EA /* NavigationRouter.swift in Sources */,
+				4C43DA80270A273A002A8A03 /* NavigationManager+HomeModule.swift in Sources */,
 				4CDDFFA62709C73800156B90 /* ViewFactory.swift in Sources */,
 				4CDDFFA42709C66400156B90 /* ViewControllerFactory.swift in Sources */,
 				4CC1064726CF9130001432B7 /* AppDelegate.swift in Sources */,

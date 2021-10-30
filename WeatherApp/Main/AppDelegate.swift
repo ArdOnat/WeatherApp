@@ -37,7 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func startAppFlow() {
         let factory = ViewFactory(networkClient: ApiClient.shared)
         let navigationManager = NavigationManager(navigationController, factory: factory)
-        factory.navigationDelegate = navigationManager
+        factory.navigationManager = navigationManager
         
         navigationManager.startNavigationFlow()
     }

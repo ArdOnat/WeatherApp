@@ -14,7 +14,7 @@ import HomeModule
 final class ViewFactory: ViewControllerFactory {
 
     private let networkClient: NetworkClient
-    weak var navigationDelegate: NavigationRouter?
+    weak var navigationManager: NavigationManager?
     
     init(networkClient: NetworkClient) {
         self.networkClient = networkClient
@@ -26,7 +26,7 @@ final class ViewFactory: ViewControllerFactory {
     }
     
     private func homePage() -> HomeViewController? {
-        guard let homeApi = networkClient as? HomeApi, let navigationDelegate = navigationDelegate as? HomeNavigation, let viewOperationHandler = navigationDelegate as? HomeViewOperationHandler else { return nil }
-        return HomePageModuleBuilder.generate(homeApi: homeApi, homeNavigationHandler: navigationDelegate, viewOperationHandler: viewOperationHandler)
+        guard let homeApi = networkClient as? HomeApi, let navigationManager = navigationManager else { return nil }
+        return HomePageModuleBuilder.generate(homeApi: homeApi, homeNavigationHandler: navigationManager, viewOperationHandler: navigationManager)
     }
 }
