@@ -12,7 +12,6 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var appFlow: AppFlow?
     
     private lazy var navigationController = UINavigationController()
 
@@ -37,10 +36,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private func startAppFlow() {
         let factory = ViewFactory(networkClient: ApiClient.shared)
-        let router = NavigationControllerRouter(navigationController, factory: factory)
-        factory.navigationDelegate = router
+        let navigationManager = NavigationManager(navigationController, factory: factory)
+        factory.navigationDelegate = navigationManager
         
-        appFlow = AppFlow(delegate: router)
-        appFlow?.start()
+        navigationManager.startNavigationFlow()
     }
 }

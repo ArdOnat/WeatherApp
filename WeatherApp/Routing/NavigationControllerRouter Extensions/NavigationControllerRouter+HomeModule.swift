@@ -7,13 +7,12 @@
 
 import HomeModule
 
-extension NavigationControllerRouter: HomeNavigation {
+extension NavigationManager: HomeNavigation {
     func routeToDetail() {
-        self.push(factory.homePageViewController())
     }
 }
 
-extension NavigationControllerRouter: HomeViewOperationHandler {
+extension NavigationManager: HomeViewOperationHandler {
     func showToast(with errorMessage: String) {
         self.showToastMessageView(with: errorMessage)
     }

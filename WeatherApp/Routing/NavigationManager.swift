@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class NavigationControllerRouter: NavigationRouter {
+final class NavigationManager: NavigationRouter {
     let navigationController: UINavigationController
     let factory: ViewControllerFactory
     
@@ -16,12 +16,16 @@ final class NavigationControllerRouter: NavigationRouter {
         self.factory = factory
     }
     
-    func startNavigation() {
+    func startNavigationFlow() {
         push(factory.homePageViewController())
     }
     
     func push(_ viewController: UIViewController) {
         navigationController.pushViewController(viewController, animated: true)
+    }
+    
+    func present(_ viewController: UIViewController) {
+        navigationController.topViewController?.present(viewController, animated: true)
     }
     
     func showToastMessageView(with message: String) {
